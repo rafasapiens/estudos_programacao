@@ -1,0 +1,64 @@
+<Slide>:
+           
+    name: 'Sliders'     
+    BoxLayout:
+        size_hint_y: None
+        height: '300dp'
+            
+        Label:
+            text: 'Default'
+                
+        Slider:
+            id: s1
+            step: 5
+                
+        Label:
+            text: '{}'.format(s1.value)
+                
+        BoxLayout:
+            Button:
+                orientation: 'vertical'
+                text: 'Sou um botão \n    Play/Stop'
+                font_size: 15
+    
+    BoxLayout:
+        size_hint_y: None
+        height: '300dp'
+            
+        Label:
+            text: 'Stepped'
+                
+        Slider:
+            id: s2
+            step: 1
+                
+        Label:
+            text: '{}'.format(s2.value)
+                
+        AnchorLayout:
+            size_hint_y: None
+            height: '300dp'
+            
+            GridLayout:
+                cols:2
+                spacing: '10dp'
+                size_hint_x: None
+                width: self.minimum_width
+                
+                Slider:
+                    size_hint_x: None
+                    width: '20dp'
+                    orientation: 'vertical'
+                    value: s1.value
+                    on_value: s1.value = self.value
+                    
+                    
+                Slider:
+                    size_hint_x: None
+                    width: '48dp'
+                    orientation: 'vertical'
+                    value: s2.value
+                    on_value: s2.value = self.value
+                    step: 20
+   
+     

@@ -1,0 +1,9 @@
+
+BSSID, First time seen, Last time seen, channel, Speed, Privacy, Cipher, Authentication, Power, # beacons, # IV, LAN IP, ID-length, ESSID, Key
+20:B3:99:AA:1C:C9, 2019-03-12 14:25:25, 2019-03-12 15:33:49,  4,  -1, OPN, ,   ,  -1,        0,     1837,  10. 24.175. 25,   0, , 
+
+Station MAC, First time seen, Last time seen, Power, # packets, BSSID, Probed ESSIDs
+74:8D:08:98:9A:F7, 2019-03-12 14:26:22, 2019-03-12 15:31:43, -84,      412, 20:B3:99:AA:1C:C9,
+F0:DB:E2:5E:CD:66, 2019-03-12 14:44:11, 2019-03-12 15:33:44, -82,      153, 20:B3:99:AA:1C:C9,
+30:CB:F8:77:16:33, 2019-03-12 14:25:25, 2019-03-12 15:33:49, -74,     3407, 20:B3:99:AA:1C:C9,
+

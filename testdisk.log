@@ -1,0 +1,924 @@
+
+
+Mon Mar 25 14:33:50 2019
+Command line: TestDisk
+
+TestDisk 7.0, Data Recovery Utility, April 2015
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Linux, kernel 4.15.0-46-generic (#49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019) x86_64
+Compiler: GCC 7.2
+ext2fs lib: 1.44.1, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.0
+/dev/sda: LBA, HPA, LBA48, DCO support
+/dev/sda: size       976773168 sectors
+/dev/sda: user_max   976773168 sectors
+/dev/sda: native_max 976773168 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 0 sectors, sector size=512
+Hard disk list
+Disk /dev/sda - 500 GB / 465 GiB - CHS 60801 255 63, sector size=512 - SAMSUNG HM500JI, S/N:S227J56B700692, FW:2AC101C4
+Disk /dev/sdc - 15 GB / 14 GiB - CHS 14664 64 32, sector size=512 - SanDisk Cruzer Blade, FW:1.00
+Disk /dev/sdd - 63 GB / 59 GiB - CHS 60906 64 32, sector size=512 - Generic Storage Device, FW:0.00
+Disk /dev/sde - 8011 MB / 7640 MiB - CHS 1021 247 62, sector size=512 - Kingston DT 101 G2, FW:PMAP
+
+Partition table type (auto): Intel
+Disk /dev/sde - 8011 MB / 7640 MiB - Kingston DT 101 G2
+Partition table type: Intel
+
+Analyse Disk /dev/sde - 8011 MB / 7640 MiB - CHS 1021 247 62
+Geometry from i386 MBR: head=41 sector=41
+BAD_RS LBA=8064 15314
+FAT32 at 0/130/5
+Info: size boot_sector 15638656, partition 15638656
+FAT1 : 640-4463
+FAT2 : 4464-8287
+start_rootdir : 8288 root cluster : 2
+Data : 8288-15638655
+sectors : 15638656
+cluster_size : 32
+no_of_cluster : 488449 (2 - 488450)
+fat_length 3824 calculated 3817
+heads/cylinder 128 (FAT) != 247 (HD)
+sect/track 63 (FAT) != 62 (HD)
+Current partition structure:
+Warning: number of heads/cylinder mismatches 128 (FAT) != 247 (HD)
+Warning: number of sectors per track mismatches 63 (FAT) != 62 (HD)
+ 1 * FAT32 LBA                0 130  5  1021 179 28   15638656 [KINGSTON]
+
+Bad relative sector.
+
+search_part()
+Disk /dev/sde - 8011 MB / 7640 MiB - CHS 1021 247 62
+FAT32 at 0/130/5
+FAT1 : 640-4463
+FAT2 : 4464-8287
+start_rootdir : 8288 root cluster : 2
+Data : 8288-15638655
+sectors : 15638656
+cluster_size : 32
+no_of_cluster : 488449 (2 - 488450)
+fat_length 3824 calculated 3817
+heads/cylinder 128 (FAT) != 247 (HD)
+sect/track 63 (FAT) != 62 (HD)
+
+FAT32 at 0/130/5
+     FAT32                    0 130  5  1021 179 28   15638656 [KINGSTON]
+     FAT32, blocksize=16384, 8006 MB / 7636 MiB
+Warning: the current number of heads per cylinder is 247 but the correct value may be 255.
+
+Results
+   L FAT32                    0 130  5  1021 179 28   15638656 [KINGSTON]
+     FAT32, blocksize=16384, 8006 MB / 7636 MiB
+
+Hint for advanced users. dmsetup may be used if you prefer to avoid to rewrite the partition table for the moment:
+echo "0 15638656 linear /dev/sde 8064" | dmsetup create test0
+add_ext_part_i386: max
+add_ext_part_i386: min
+
+interface_write()
+ 1 E extended                 0   1  1  1021 179 28   15646658
+ 5 L FAT32                    0 130  5  1021 179 28   15638656 [KINGSTON]
+
+search_part()
+Disk /dev/sde - 8011 MB / 7640 MiB - CHS 1021 247 62
+FAT32 at 0/130/5
+FAT1 : 640-4463
+FAT2 : 4464-8287
+start_rootdir : 8288 root cluster : 2
+Data : 8288-15638655
+sectors : 15638656
+cluster_size : 32
+no_of_cluster : 488449 (2 - 488450)
+fat_length 3824 calculated 3817
+heads/cylinder 128 (FAT) != 247 (HD)
+sect/track 63 (FAT) != 62 (HD)
+
+FAT32 at 0/130/5
+     FAT32                    0 130  5  1021 179 28   15638656 [KINGSTON]
+     FAT32, blocksize=16384, 8006 MB / 7636 MiB
+Warning: the current number of heads per cylinder is 247 but the correct value may be 255.
+
+Results
+   L FAT32                    0 130  5  1021 179 28   15638656 [KINGSTON]
+     FAT32, blocksize=16384, 8006 MB / 7636 MiB
+
+Hint for advanced users. dmsetup may be used if you prefer to avoid to rewrite the partition table for the moment:
+echo "0 15638656 linear /dev/sde 8064" | dmsetup create test0
+add_ext_part_i386: max
+add_ext_part_i386: min
+
+interface_write()
+ 1 E extended                 0   1  1  1021 179 28   15646658
+ 5 L FAT32                    0 130  5  1021 179 28   15638656 [KINGSTON]
+simulate write!
+
+write_mbr_i386: starting...
+write_all_log_i386: starting...
+write_all_log_i386: CHS: 0/1/1,lba=62
+
+Interface Advanced
+Geometry from i386 MBR: head=41 sector=41
+BAD_RS LBA=8064 15314
+FAT32 at 0/130/5
+Info: size boot_sector 15638656, partition 15638656
+FAT1 : 640-4463
+FAT2 : 4464-8287
+start_rootdir : 8288 root cluster : 2
+Data : 8288-15638655
+sectors : 15638656
+cluster_size : 32
+no_of_cluster : 488449 (2 - 488450)
+fat_length 3824 calculated 3817
+heads/cylinder 128 (FAT) != 247 (HD)
+sect/track 63 (FAT) != 62 (HD)
+ 1 * FAT32 LBA                0 130  5  1021 179 28   15638656 [KINGSTON]
+     FAT32, blocksize=16384, 8006 MB / 7636 MiB
+
+FAT: cluster=2(0x2), pos=16352
+Directory /
+X  19200 drwxr-xr-x     0      0     16384  1-Jan-2008 20:37 _ILES
+X      3 -rwxr-xr-x     0      0       166 14-Apr-2010 22:54 _UTORUN.INF
+       4 -rwxr-xr-x     0      0     70656  9-Jul-2010 14:14 unInstaller.exe
+       0 drwxr-xr-x     0      0         0 29-Nov-2010 13:02 urDrive
+    6263 -rwxr-xr-x     0      0   1894400 19-Aug-2010 21:34 urDrive.exe
+X   6379 drwxr-xr-x     0      0         0 24-Feb-2011 15:40 CD4 - Batidão Sertanejo   2009
+X   9267 drwxr-xr-x     0      0         0 24-Feb-2011 15:40 CD1. Batidao Sertanejo II 2011.therebels.bycontro
+X  12038 drwxr-xr-x     0      0         0 24-Feb-2011 15:40 CD2. Batidao Sertanejo II   2011.therebels.bycontro
+X  14748 drwxr-xr-x     0      0         0 24-Feb-2011 15:40 CD3. Batidao Sertanejo II   2011.therebels.bycontro
+X  17381 drwxr-xr-x     0      0         0 24-Feb-2011 15:41 CD4. Batidao Sertanejo II   2011.therebels.bycontro
+X  19681 drwxr-xr-x     0      0         0 24-Feb-2011 15:41 CD1 - Batidão Sertanejo   2009
+X  22828 drwxr-xr-x     0      0         0 24-Feb-2011 15:41 CD2 - Batidão Sertanejo   2009
+X  26577 drwxr-xr-x     0      0         0 24-Feb-2011 15:41 CD3 - Batidão Sertanejo    2009
+X  22828 drwxr-xr-x     0      0         0 24-Feb-2011 15:41 CD2 - Batidão Sertanejo   2009
+X  26577 drwxr-xr-x     0      0         0 24-Feb-2011 15:41 CD3 - Batidão Sertanejo    2009
+X  29636 -rwxr-xr-x     0      0     76800 11-Mar-2011 15:26 Faturamento 02-2011.xls
+X  29642 -rwxr-xr-x     0      0     76800 14-Mar-2011 10:51 _EED5000
+X      0 -rwxr-xr-x     0      0         0 14-Mar-2011 10:51 Faturamento 02-2011.xls~RF5df279.TMP
+X  29636 -rwxr-xr-x     0      0     76800 11-Mar-2011 15:26 Faturamento 02-2011.xls~RF5df279.TMP
+X  29642 -rwxr-xr-x     0      0     76800 14-Mar-2011 10:51 Faturamento 02-2011.xls
+X  29636 -rwxr-xr-x     0      0     76800 14-Mar-2011 11:03 _0486000
+X      0 -rwxr-xr-x     0      0         0 14-Mar-2011 11:03 Faturamento 02-2011.xls~RF6841d1.TMP
+X  29642 -rwxr-xr-x     0      0     76800 14-Mar-2011 10:51 Faturamento 02-2011.xls~RF6841d1.TMP
+X  29636 -rwxr-xr-x     0      0     76800 14-Mar-2011 11:03 Faturamento 02-2011.xls
+X  29637 drwxr-xr-x     0      0     16384 15-Mar-2011 10:42 Nova pasta
+X  29638 drwxr-xr-x     0      0     16384 15-Mar-2011 10:42 Cópia de Nova pasta
+X      0 -rwxr-xr-x     0      0         0 17-Mar-2011 11:37 Ozzy.JPG
+X  29660 -rwxr-xr-x     0      0     47448 17-Mar-2011 11:37 Ozzy.JPG
+X      0 -rwxr-xr-x     0      0         0 17-Mar-2011 11:50 ozzy perfetc.JPG
+X  29795 -rwxr-xr-x     0      0     49984 17-Mar-2011 11:50 ozzy perfetc.JPG
+X      0 -rwxr-xr-x     0      0         0 17-Mar-2011 12:00 Ozzy mais do que perfeito.JPG
+X  29652 -rwxr-xr-x     0      0     50752 17-Mar-2011 12:00 Ozzy mais do que perfeito.JPG
+X  29652 -rwxr-xr-x     0      0     50752 17-Mar-2011 12:00 Ozzy.JPG
+X      3 -rwxr-xr-x     0      0       293 17-Mar-2011 18:18 trzC36E.tmp
+   29653 dr-xr-xr-x     0      0         0 17-Mar-2011 18:18 MAREIJA
+X      0 -rwxr-xr-x     0      0         0  6-Apr-2011 10:05 trzC36E.tmp
+X      3 drwxr-xr-x     0      0     16384  6-Apr-2011 09:59 Fotos Arthur
+X  29636 drwxr-xr-x     0      0         0  8-Apr-2011 14:59 Nova pasta
+   29636 drwxr-xr-x     0      0         0  8-Apr-2011 14:59 Fotos Máquina D. vanir
+X  52890 -rwxr-xr-x     0      0    119016  7-Mar-2011 23:19 Henrique varias.jpg
+X  52898 drwxr-xr-x     0      0         0  8-Apr-2011 15:10 Henrique
+X  52899 drwxr-xr-x     0      0     16384  8-Apr-2011 15:10 Músicas1
+   52898 drwxr-xr-x     0      0         0  8-Apr-2011 15:10 Fotos Henrique
+   65538 dr-xr-xr-x     0      0         0 27-Apr-2011 09:39 RECYCLER
+X     15 -rwxr-xr-x     0      0     59302 27-Apr-2011 09:39 _RZ5.TMP
+X     15 -rwxr-xr-x     0      0     59302 27-Apr-2011 09:39 _RZ6.TMP
+X     15 -rwxr-xr-x     0      0     59302 27-Apr-2011 09:40 _RZ7.TMP
+   65551 drwxr-xr-x     0      0         0 27-Apr-2011 09:41 Músicas
+   91881 drwxr-xr-x     0      0         0 27-Apr-2011 09:43 HENRIQUE
+  331100 drwxr-xr-x     0      0         0 31-Jul-2011 14:36 Fotos Leila
+X 328391 -rwxr-xr-x     0      0     78848 20-Oct-2011 18:41 Plan Controle de Valores de clientes.xls
+X    716 drwxr-xr-x     0      0     16384 28-Oct-2011 18:28 Tele Tudo RS  ligações diárias
+  328534 drwxr-xr-x     0      0         0 21-Sep-2011 22:52 Seleção para aniversário
+  329199 -rwxr-xr-x     0      0    403664  5-Nov-2011 21:35 cartao henrique1.jpg
+X 329274 drwxr-xr-x     0      0         0 11-Nov-2011 19:19 Nova pasta
+  329274 drwxr-xr-x     0      0         0 11-Nov-2011 19:19 Aniver bebe 2 anos
+X 329351 -rwxr-xr-x     0      0     79872 17-Nov-2011 00:47 _8C71000
+X      0 -rwxr-xr-x     0      0         0 17-Nov-2011 00:47 Plan Controle de Valores de clientes.xls~RF17ca02.TMP
+X    711 -rwxr-xr-x     0      0     78848 20-Oct-2011 18:41 Plan Controle de Valores de clientes.xls~RF17ca02.TMP
+X   1671 -rwxr-xr-x     0      0     79872 17-Nov-2011 00:47 Plan Controle de Valores de clientes.xls
+X    712 drwxr-xr-x     0      0     16384 30-Nov-2011 11:51 Passo da Ilha
+X  19144 -rwxr-xr-x     0      0    124995 10-Jan-2012 00:03 _OLETOS3.PDF
+X  19152 -rwxr-xr-x     0      0    125963 10-Jan-2012 00:04 _OLETOS4.PDF
+X  19160 -rwxr-xr-x     0      0    125308 10-Jan-2012 00:04 _OLETOS5.PDF
+X  19168 -rwxr-xr-x     0      0    125361 10-Jan-2012 00:02 _OLETOS.PDF
+X  19176 -rwxr-xr-x     0      0    125252 10-Jan-2012 00:02 _OLETOS2.PDF
+  412400 drwxr-xr-x     0      0         0  6-Jun-2012 00:40 Audiolivro Porque Queremos que Você Fique Rico
+  455135 drwxr-xr-x     0      0         0  6-Jun-2012 02:29 A lei do triunfo
+  264513 drwxr-xr-x     0      0         0 22-Jun-2012 22:33 Disquinho
+X 264806 drwxr-xr-x     0      0         0 18-Dec-2012 16:34 Nova pasta
+X 264806 drwxr-xr-x     0      0         0 18-Dec-2012 16:34 Agora Imprimir tamanho 13x18
+X   2662 drwxr-xr-x     0      0     16384 18-Dec-2012 16:34 A A Imprimir tamanho 13x18
+  302146 drwxr-xr-x     0      0         0 18-Dec-2012 16:45 Book Nicolas
+X      0 -rwxr-xr-x     0      0         0  8-Aug-2012 15:20 modelo capa praia.cdr
+X   2847 -rwxr-xr-x     0      0   2708926  8-Aug-2012 15:20 modelo capa praia.cdr
+X      0 -rwxr-xr-x     0      0         0  8-Aug-2012 15:21 MODELO PAG 2.cdr
+X 302401 -rwxr-xr-x     0      0   2959626  8-Aug-2012 15:21 MODELO PAG 2.cdr
+X 302401 -rwxr-xr-x     0      0   2959626  8-Aug-2012 15:21 _@@CDRW.TMP
+X  40438 -rwxr-xr-x     0      0   2937812  8-Aug-2012 15:22 MODELO PAG 2.cdr
+X  40257 -rwxr-xr-x     0      0   2959626  8-Aug-2012 15:21 Cópia_de_segurança_de_MODELO PAG 2.cdr
+X  19243 -rwxr-xr-x     0      0   4418463  6-Feb-2013 12:42 _IC_0121.JPG
+X  19243 -rwxr-xr-x     0      0   4418463  6-Feb-2013 12:42 _IC_0121.JPG
+X  19243 -rwxr-xr-x     0      0   4418463  6-Feb-2013 12:42 _IC_0121.JPG
+X  19243 -rwxr-xr-x     0      0   4418463  6-Feb-2013 12:42 _IC_0121.JPG
+X      0 -rwxr-xr-x     0      0         0 13-Sep-2013 16:57 Pajada do aniversariante.mp4
+X   6379 -rwxr-xr-x     0      0  11249927 13-Sep-2013 16:56 Pajada do aniversariante.mp4.1bx0twe.partial
+X   6379 -rwxr-xr-x     0      0  11249927 13-Sep-2013 16:56 Pajada do aniversariante.mp4
+    7198 drwxr-xr-x     0      0         0 18-Oct-2013 10:31 Henrique Fotos
+X   7321 drwxr-xr-x     0      0     16384 18-Oct-2013 11:32 _965726_
+X   7321 -rwxr-xr-x     0      0   8388608 16-Jan-2015 18:49 ReadyBoostPerfTest.tmp
+       0 drwxr-xr-x     0      0         0 22-Jun-2015 15:10 IMPRESSÃO
+  152144 drwxr-xr-x     0      0         0  8-Jun-2016 16:32 Varias estórias
+FAT: cluster=65551(0x1000f), pos=2113920
+FAT: cluster=101244(0x18b7c), pos=3256096
+FAT: cluster=158255(0x26a2f), pos=5080448
+FAT: cluster=211608(0x33a98), pos=6787744
+fat_copy dst=/home/rafael/Músicas/(2) 01 - SAIA E BICICLETINHA - BONDE DO FORRO VOL 10 LANCAMENTO 2010.mp3 first_cluster=65552 (2105888) size=3308463
+fat_copy dst=/home/rafael/Músicas/Cesar Menoti e Fabiano - Ela ligou terminando tudo entre.mp3 first_cluster=218 (15200) size=1759574
+fat_copy dst=/home/rafael/Músicas/(Cesar Menoti e Fabiano) - Eu falo sério [ moda de viola].MP3 first_cluster=65862 (2115808) size=6015356
+fat_copy dst=/home/rafael/Músicas/Cesar Menoti e Fabiano - Evidencias.mp3 first_cluster=694 (30432) size=3448810
+fat_copy dst=/home/rafael/Músicas/(dente)Cesar Menotti e Fabiano 21 - feiticeira-cesar menoti.mp3 first_cluster=66441 (2134336) size=1806464
+fat_copy dst=/home/rafael/Músicas/(ENGENHEIROS DO HAWAII) ACUSTICO MTV - 09) Refrao de Bolero.mp3 first_cluster=66552 (2137888) size=4874602
+fat_copy dst=/home/rafael/Músicas/(Gaucha)Tche Garotos - To Voltando Pra Ficar - vanerao.mp3 first_cluster=66850 (2147424) size=3172276
+fat_copy dst=/home/rafael/Músicas/Katinguele -Inara.mp3 first_cluster=67044 (2153632) size=3679804
+fat_copy dst=/home/rafael/Músicas/katinguele - No compasso do criador.mp3 first_cluster=67269 (2160832) size=2615424
+fat_copy dst=/home/rafael/Músicas/Legiao Urbana - Tempo Perdido.mp3 first_cluster=67429 (2165952) size=4825425
+fat_copy dst=/home/rafael/Músicas/Legiao Urbana -  O Teatro Dos Vampiros.mp3 first_cluster=67724 (2175392) size=4326967
+fat_copy dst=/home/rafael/Músicas/(NATIVISTA) GRUPO RODEIO - IGUARIA CAMPEIRA.mp3 first_cluster=67989 (2183872) size=2912256
+fat_copy dst=/home/rafael/Músicas/(Novela viver a vida) Papas da Língua - Vem pra cá.mp3 first_cluster=68167 (2189568) size=3493619
+fat_copy dst=/home/rafael/Músicas/-    Fernando e Sorocaba - Sua Casa Caiu (1).mp3 first_cluster=68381 (2196416) size=3973269
+fat_copy dst=/home/rafael/Músicas/-   Saia E Bicicletinha(1).mp3 first_cluster=68624 (2204192) size=6051433
+fat_copy dst=/home/rafael/Músicas/Fernando e Sorocaba - Paga Pau.mp3 first_cluster=68994 (2216032) size=3348540
+fat_copy dst=/home/rafael/Músicas/- (A) lady Gaga Poker Face 2010 (Faixa do novo Cd Summer Eletrohits vol. 06 da Som Livre ( Remix .mp3 first_cluster=69199 (2222592) size=5285846
+fat_copy dst=/home/rafael/Músicas/- - Fernando & Sorocaba - Bala De Prata - Cópia.mp3 first_cluster=69522 (2232928) size=3578193
+fat_copy dst=/home/rafael/Músicas/- 2 Dois Filhos de Francisco - Pra Mudar Minha Vida - Zeze Di Camargo e Luciano (10).mp3 first_cluster=69741 (2239936) size=6487420
+fat_copy dst=/home/rafael/Músicas/- BALADAS Lady Gaga Poker Face 2010 (Faixa do novo Cd Summer Eletrohits vol. 06 da Som Livre ( Re.mp3 first_cluster=70137 (2252608) size=5282006
+fat_copy dst=/home/rafael/Músicas/Cesar Menoti E Fabiano - Ainda Ontem Chorei De Saudade.mp3 first_cluster=4924 (165792) size=1852580
+fat_copy dst=/home/rafael/Músicas/Cesar Menoti e Fabiano - Ciumenta.mp3 first_cluster=5038 (169440) size=2857721
+fat_copy dst=/home/rafael/Músicas/Cesar Menoti e Fabiano - Leilao.mp3 first_cluster=5213 (175040) size=3186658
+fat_copy dst=/home/rafael/Músicas/Cesar Menoti e Fabiano - Palavras ao vento.mp3 first_cluster=5408 (181280) size=3009382
+fat_copy dst=/home/rafael/Músicas/Cesar Menoti e Fabiano - Por que eu te amo.mp3 first_cluster=5592 (187168) size=1493970
+fat_copy dst=/home/rafael/Músicas/Cesar Menoti e Fabiano - Tarde Demais.mp3 first_cluster=5684 (190112) size=5696518
+fat_copy dst=/home/rafael/Músicas/Cesar menoti e Fabiano- Como um anjo.mp3 first_cluster=6032 (201248) size=2473569
+fat_copy dst=/home/rafael/Músicas/Cesar Menoti e Fabiano- Tira essa paixao da cabeça.mp3 first_cluster=6183 (206080) size=1949824
+fat_copy dst=/home/rafael/Músicas/Karametade - Mel Na Minha Boca.mp3 first_cluster=71839 (2307072) size=4012845
+fat_copy dst=/home/rafael/Músicas/Legiao Urbana - Faroeste Caboclo.mp3 first_cluster=72084 (2314912) size=8677838
+fat_copy dst=/home/rafael/Músicas/Legiao Urbana - Giz.mp3 first_cluster=72614 (2331872) size=4822842
+fat_copy dst=/home/rafael/Músicas/Legiao Urbana - Meninos E Meninas.mp3 first_cluster=72909 (2341312) size=3237504
+fat_copy dst=/home/rafael/Músicas/Legiao Urbana - Pais e Filhos.mp3 first_cluster=73107 (2347648) size=2463559
+fat_copy dst=/home/rafael/Músicas/Legião Urbana - Eduardo e Mônica.mp3 first_cluster=73258 (2352480) size=4329773
+fat_copy dst=/home/rafael/Músicas/- Musical San Marino- Preciso te falar.mp3 first_cluster=73523 (2360960) size=2987052
+fat_copy dst=/home/rafael/Músicas/- Paginas da vida - Papas da Lingua - Ela vai passar.mp3 first_cluster=73706 (2366816) size=3499120
+fat_copy dst=/home/rafael/Músicas/Panamericano.mp3 first_cluster=73920 (2373664) size=9002304
+fat_copy dst=/home/rafael/Músicas/Papas Da Lingua - Minha Menina.mp3 first_cluster=74470 (2391264) size=3917366
+fat_copy dst=/home/rafael/Músicas/Papas Da Língua - Eu Sei (Novela páginas da vida).mp3 first_cluster=74710 (2398944) size=3629278
+fat_copy dst=/home/rafael/Músicas/San Marino - Tome um copo de cerveja.mp3 first_cluster=74932 (2406048) size=3307773
+fat_copy dst=/home/rafael/Músicas/- Sertaneja - Zeze di Camargo e Luciano - zezé di camargo e luciano - tudo de novo.mp3 first_cluster=75134 (2412512) size=4662891
+fat_copy dst=/home/rafael/Músicas/- Sertanejo - Cesar Menoti E Fabiano - Caso Marcado.mp3 first_cluster=75419 (2421632) size=3182649
+fat_copy dst=/home/rafael/Músicas/- Zeze di Camargo e Luciano - Pra desbotar a saudade - ZeZé Di Camargo & Luciano 1991.mp3 first_cluster=75614 (2427872) size=3437589
+fat_copy dst=/home/rafael/Músicas/Shakira - Pies descalzos, sueños bl.mp3 first_cluster=75824 (2434592) size=3305766
+fat_copy dst=/home/rafael/Músicas/001 - Grupo Rodeio - Cheiro De Terra.mp3 first_cluster=76026 (2441056) size=3002705
+fat_copy dst=/home/rafael/Músicas/003 - Grupo Rodeio - De tanto pelear (Chamamé).mp3 first_cluster=76210 (2446944) size=2863104
+fat_copy dst=/home/rafael/Músicas/Grupo Rodeio - Xote Na Chuva.MP3 first_cluster=76385 (2452544) size=3177371
+fat_copy dst=/home/rafael/Músicas/01 -Pagode - KARAMETADE - Toda Mulher(1).mp3 first_cluster=76579 (2458752) size=4848399
+fat_copy dst=/home/rafael/Músicas/01 Fora do Eixo Hugo Pena e Gabriel Álbum Desconhecido (30-12-2007 15-24-55) Desconhecido 128kbps.mp3 first_cluster=76875 (2468224) size=3062341
+fat_copy dst=/home/rafael/Músicas/Lost Highway.mp3 first_cluster=77062 (2474208) size=5122176
+fat_copy dst=/home/rafael/Músicas/01-3 X 4-Engenheiros do Hawaii-Acustico MTV.mp3 first_cluster=77375 (2484224) size=3031927
+fat_copy dst=/home/rafael/Músicas/01-Dom Quixote-Engenheiros do Hawaii-Acustico MTV.mp3 first_cluster=77561 (2490176) size=3353343
+fat_copy dst=/home/rafael/Músicas/Legiao Urbana - Ha Tempos.mp3 first_cluster=77766 (2496736) size=3933040
+fat_copy dst=/home/rafael/Músicas/Roxette - June Afternoon.mp3 first_cluster=78007 (2504448) size=6144258
+fat_copy dst=/home/rafael/Músicas/02 - Engenheiros do Hawaii - Acústico_MTV - Até o fim.mp3 first_cluster=78383 (2516480) size=3506176
+fat_copy dst=/home/rafael/Músicas/Battle Song.wma first_cluster=78597 (2523328) size=3911424
+fat_copy dst=/home/rafael/Músicas/Summertime.mp3 first_cluster=78836 (2530976) size=4020352
+fat_copy dst=/home/rafael/Músicas/Legião Urbana - Metal Contra As Nuvens.mp3 first_cluster=79082 (2538848) size=13729042
+fat_copy dst=/home/rafael/Músicas/karametade - Grito de paixao.mp3 first_cluster=79920 (2565664) size=4321798
+fat_copy dst=/home/rafael/Músicas/02_Roxette - You Don't Understand Me.mp3 first_cluster=80184 (2574112) size=6501613
+fat_copy dst=/home/rafael/Músicas/Jair oliveira - tiro onda.mp3 first_cluster=80581 (2586816) size=4856719
+fat_copy dst=/home/rafael/Músicas/Abracadabra.wma first_cluster=80878 (2596320) size=3360097
+fat_copy dst=/home/rafael/Músicas/Put The Boy Back In Cowboy.mp3 first_cluster=81084 (2602912) size=7023116
+fat_copy dst=/home/rafael/Músicas/03_Roxette - The Look.mp3 first_cluster=81513 (2616640) size=5742390
+fat_copy dst=/home/rafael/Músicas/04_Roxette - Dressed for Success.mp3 first_cluster=81864 (2627872) size=6116046
+fat_copy dst=/home/rafael/Músicas/05 Fallen Angel.mp3 first_cluster=82238 (2639840) size=3751227
+fat_copy dst=/home/rafael/Músicas/05-bon_jovi_-_last_man_standing-smp3.mp3 first_cluster=82467 (2647168) size=10091437
+fat_copy dst=/home/rafael/Músicas/05_Roxette - Listen to Your Heart.mp3 first_cluster=83083 (2666880) size=7606306
+fat_copy dst=/home/rafael/Músicas/Roxette - Dangerous.mp3 first_cluster=83548 (2681760) size=5533623
+fat_copy dst=/home/rafael/Músicas/07 - Galpão Criolo 2000 - Tche Barbaridade - O rio grande me criou (Vanera).mp3 first_cluster=83886 (2692576) size=3002368
+fat_copy dst=/home/rafael/Músicas/07 - Papas Da Língua - Pequeno Grande Amor - Malhação Nacional - 2007.mp3 first_cluster=84070 (2698464) size=3447120
+fat_copy dst=/home/rafael/Músicas/Roxette - It Must Have Been Love.mp3 first_cluster=84281 (2705216) size=6279066
+fat_copy dst=/home/rafael/Músicas/08_Roxette - Joyride.mp3 first_cluster=84665 (2717504) size=5818251
+fat_copy dst=/home/rafael/Músicas/Michael Sembello - Maniac.mp3 first_cluster=85021 (2728896) size=3910564
+fat_copy dst=/home/rafael/Músicas/09_Roxette - Fading Like a Flower (Every Ti.mp3 first_cluster=85260 (2736544) size=5635184
+fat_copy dst=/home/rafael/Músicas/1) Megamix House Summer 2009 - Isis Dj Set Mix (m2O Elettro Electro Hot Party Hit Mania Dance Rem.mp3 first_cluster=85604 (2747552) size=42633970
+fat_copy dst=/home/rafael/Músicas/Roxette - The Big L.mp3 first_cluster=88207 (2830848) size=6516665
+fat_copy dst=/home/rafael/Músicas/11 - Legião Urbana - Será.mp3 first_cluster=88605 (2843584) size=2370424
+fat_copy dst=/home/rafael/Músicas/Roxette - Spending my Time.mp3 first_cluster=88750 (2848224) size=6727335
+fat_copy dst=/home/rafael/Músicas/12 Low Rider.mp3 first_cluster=89161 (2861376) size=933556
+fat_copy dst=/home/rafael/Músicas/12_Roxette - How Do You Do.mp3 first_cluster=89218 (2863200) size=4670952
+fat_copy dst=/home/rafael/Músicas/Roxette - Almost Unreal.mp3 first_cluster=89504 (2872352) size=5808854
+fat_copy dst=/home/rafael/Músicas/Roxette - Sleeping in my Car.mp3 first_cluster=89859 (2883712) size=5160604
+fat_copy dst=/home/rafael/Músicas/Roxette - Crash! Boom! Bang!.mp3 first_cluster=90174 (2893792) size=6446455
+fat_copy dst=/home/rafael/Músicas/Celi Campello -  Banho de Lua.mp3 first_cluster=90568 (2906400) size=2839790
+fat_copy dst=/home/rafael/Músicas/16_Roxette - Vulnerable.mp3 first_cluster=90742 (2911968) size=6497851
+fat_copy dst=/home/rafael/Músicas/Roxette - She Doesn't Live Here Anymore.mp3 first_cluster=91139 (2924672) size=5935530
+fat_copy dst=/home/rafael/Músicas/18_Roxette - I Don't Want to Get Hurt.mp3 first_cluster=91502 (2936288) size=6193178
+fat_copy dst=/home/rafael/Músicas/200 Por Hora.mp3 first_cluster=91931 (2950016) size=3331306
+fat_copy dst=/home/rafael/Músicas/shine (ending theme).mp3 first_cluster=92195 (2958464) size=3572760
+fat_copy dst=/home/rafael/Músicas/30 Seconds To Mars & Kanye West - (Top singles 2010's) Kings and queens.mp3 first_cluster=92507 (2968448) size=9338729
+fat_copy dst=/home/rafael/Músicas/Victor e Leo - 60 dias - fazenda s francisco.mp3 first_cluster=93173 (2989760) size=10594636
+fat_copy dst=/home/rafael/Músicas/Papas Da Lingua - Disco Rock (Malhacao 2009)#1 Big.mp3 first_cluster=94240 (3023904) size=4209141
+fat_copy dst=/home/rafael/Músicas/80s kenny loggins - oldies - footloose(1).mp3 first_cluster=94761 (3040576) size=3674745
+fat_copy dst=/home/rafael/Músicas/Legião Urbana E RPM - A Cruz e a Espada - Renato Russo e Paulo Ricardo.mp3 first_cluster=95248 (3056160) size=4545141
+fat_copy dst=/home/rafael/Músicas/A Gente Faz a Festa - Part. Mr Catra.mp3 first_cluster=95781 (3073216) size=4036993
+fat_copy dst=/home/rafael/Músicas/Acquarela.mp3 first_cluster=96169 (3085632) size=5411416
+fat_copy dst=/home/rafael/Músicas/Aerosmith - Cryin'.mp3 first_cluster=96762 (3104608) size=4947894
+fat_copy dst=/home/rafael/Músicas/Aerosmith - Janie's Got A Gun.mp3 first_cluster=97329 (3122752) size=5289785
+fat_copy dst=/home/rafael/Músicas/Aerosmith - Love In An Elevator.mp3 first_cluster=97907 (3141248) size=5150349
+fat_copy dst=/home/rafael/Músicas/Aerosmith - Rag Doll.mp3 first_cluster=98564 (3162272) size=4233472
+fat_copy dst=/home/rafael/Músicas/Aerosmith - What It Takes.mp3 first_cluster=99125 (3180224) size=4973272
+fat_copy dst=/home/rafael/Músicas/Ai, ai, ai.wma first_cluster=99473 (3191360) size=4087146
+fat_copy dst=/home/rafael/Músicas/Ainda Gosto Dela (part. Negra Lee).mp3 first_cluster=99799 (3201792) size=3867729
+fat_copy dst=/home/rafael/Músicas/Alien Project V's Astrix - Midnight Sun_GMS Remix (goa trance-psy-rave).mp3 first_cluster=100126 (3212256) size=4622802
+fat_copy dst=/home/rafael/Músicas/Victor e Leo - Amigo Apaixonado.mp3 first_cluster=100499 (3224192) size=5192142
+fat_copy dst=/home/rafael/Músicas/Amores Imperfeitos.mp3 first_cluster=100905 (3237184) size=4042221
+fat_copy dst=/home/rafael/Músicas/Victor e Leo - Arapuca.mp3 first_cluster=101245 (3248064) size=2969900
+fat_copy dst=/home/rafael/Músicas/Armandinho  - Pegando A Saideira (ao vivo).mp3 first_cluster=101516 (3256736) size=4076739
+fat_copy dst=/home/rafael/Músicas/Armandinho - Analua.mp3 first_cluster=101836 (3266976) size=4313088
+fat_copy dst=/home/rafael/Músicas/Armandinho - Balan%25e7o da rede.mp3 first_cluster=102225 (3279424) size=3047881
+fat_copy dst=/home/rafael/Músicas/Armandinho - Casa do Sol.mp3 first_cluster=102477 (3287488) size=2994304
+fat_copy dst=/home/rafael/Músicas/Armandinho - Casinha.mp3 first_cluster=102702 (3294688) size=5657004
+fat_copy dst=/home/rafael/Músicas/Armandinho - Eu Juro.mp3 first_cluster=103084 (3306912) size=4905134
+fat_copy dst=/home/rafael/Músicas/Armandinho - Folha de Bananeira.mp3 first_cluster=103406 (3317216) size=3844015
+fat_copy dst=/home/rafael/Músicas/Armandinho - Linda.mp3 first_cluster=103834 (3330912) size=2971734
+fat_copy dst=/home/rafael/Músicas/Armandinho - Minha Menina.mp3 first_cluster=104187 (3342208) size=3913526
+fat_copy dst=/home/rafael/Músicas/Armandinho - Reggae Das Tramanda.1.mp3 first_cluster=104530 (3353184) size=3266735
+fat_copy dst=/home/rafael/Músicas/Armandinho - Reggae Das Tramanda.mp3 first_cluster=104936 (3366176) size=3270575
+fat_copy dst=/home/rafael/Músicas/Armandinho - Rosa Norte.mp3 first_cluster=105237 (3375808) size=3725314
+fat_copy dst=/home/rafael/Músicas/Armandinho - Toca uma Reguera a%ed.mp3 first_cluster=105672 (3389728) size=3047221
+fat_copy dst=/home/rafael/Músicas/Armandinho Ao Vivo 2006 - Lua Cheia.mp3 first_cluster=105979 (3399552) size=5406555
+fat_copy dst=/home/rafael/Músicas/armandinho e banda - sentimento.mp3 first_cluster=106561 (3418176) size=3995358
+fat_copy dst=/home/rafael/Músicas/Armandinho- Anjo do c%e9u.mp3 first_cluster=107329 (3442752) size=2177192
+fat_copy dst=/home/rafael/Músicas/Batendo Agua.mp3 first_cluster=107462 (3447008) size=3580255
+fat_copy dst=/home/rafael/Músicas/Beautiful Monster.mp3 first_cluster=108178 (3469920) size=10139711
+fat_copy dst=/home/rafael/Músicas/Bicicletinha.mp3 first_cluster=109311 (3506176) size=4268224
+fat_copy dst=/home/rafael/Músicas/Bob Marley - I Can See Clearly Now.mp3 first_cluster=110167 (3533568) size=3147488
+fat_copy dst=/home/rafael/Músicas/bob marley - i wanna love you.mp3 first_cluster=110360 (3539744) size=3703485
+fat_copy dst=/home/rafael/Músicas/Bob Marley - One Love.1.mp3 first_cluster=110793 (3553600) size=2688859
+fat_copy dst=/home/rafael/Músicas/Bob Marley - Stir It Up.mp3 first_cluster=110958 (3558880) size=5337756
+fat_copy dst=/home/rafael/Músicas/Bob Marley - Sun Is Shining.mp3 first_cluster=111642 (3580768) size=4402364
+fat_copy dst=/home/rafael/Músicas/Bob Marley - Three Little Birds.mp3 first_cluster=112111 (3595776) size=2882246
+fat_copy dst=/home/rafael/Músicas/Bob Marley and the wailers - forever loving jah.mp3 first_cluster=112707 (3614848) size=6034133
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - Bounce - 01 - Undivided.mp3 first_cluster=113694 (3646432) size=4768653
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - Bounce - 02 - Everyday.mp3 first_cluster=113986 (3655776) size=3707558
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - Bounce - 07 - Hook Me Up.mp3 first_cluster=114213 (3663040) size=4796344
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - Cross Road - 09 - Blaze Of Glory.mp3 first_cluster=115030 (3689184) size=8126928
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - In These Arms.mp3 first_cluster=116058 (3722080) size=5091918
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - Keep The Faith - 03 - I'll Sleep When I'm Dead.mp3 first_cluster=116369 (3732032) size=6832850
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - Keep The Faith.mp3 first_cluster=117267 (3760768) size=5501826
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - Misunderstood.mp3 first_cluster=117629 (3772352) size=5039054
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - Someday I'll Be Saturday Night.mp3 first_cluster=118412 (3797408) size=4469955
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - These Days - 02 - Something For The Pain.mp3 first_cluster=118685 (3806144) size=6877885
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - These Days - 04 - These Days.mp3 first_cluster=119604 (3835552) size=9346758
+fat_copy dst=/home/rafael/Músicas/BonJovi-NewJersey-01-LayYourHandsOnMe.mp3 first_cluster=120717 (3871168) size=8719893
+fat_copy dst=/home/rafael/Músicas/BonJovi-TheseDays-09-HeartsBreakingEven.mp3 first_cluster=121493 (3896000) size=7345580
+fat_copy dst=/home/rafael/Músicas/Victor e Leo - Borboletas.mp3 first_cluster=121983 (3911680) size=7915209
+fat_copy dst=/home/rafael/Músicas/Born To Me My Baby.mp3 first_cluster=122608 (3931680) size=4472832
+fat_copy dst=/home/rafael/Músicas/Brazuzan - Taller than a Hill.mp3 first_cluster=122989 (3943872) size=6822852
+fat_copy dst=/home/rafael/Músicas/Britney Spears - I Love Rock N Roll.mp3 first_cluster=123583 (3962880) size=2985448
+fat_copy dst=/home/rafael/Músicas/Cake - Never There.mp3 first_cluster=123837 (3971008) size=2534860
+fat_copy dst=/home/rafael/Músicas/Calma Amor.mp3 first_cluster=124065 (3978304) size=3115977
+fat_copy dst=/home/rafael/Músicas/Can't Touch This.mp3 first_cluster=124329 (3986752) size=4052878
+fat_copy dst=/home/rafael/Músicas/Cara de Pau.mp3 first_cluster=124707 (3998848) size=3240372
+fat_copy dst=/home/rafael/Músicas/Celtia.mp3 first_cluster=125169 (4013632) size=2884840
+fat_copy dst=/home/rafael/Músicas/Cher - Believe.mp3 first_cluster=125479 (4023552) size=3813169
+fat_copy dst=/home/rafael/Músicas/Chico Reiy E Parana E Zeze Di Camargo E Luciano - Coracao Aberto.mp3 first_cluster=125825 (4034624) size=4486418
+fat_copy dst=/home/rafael/Músicas/Chora Me Liga.mp3 first_cluster=126354 (4051552) size=3084615
+fat_copy dst=/home/rafael/Músicas/Chorei Largado.mp3 first_cluster=126683 (4062080) size=2619253
+fat_copy dst=/home/rafael/Músicas/chuva de bruxaria - victor e leo.mp3 first_cluster=126972 (4071328) size=2498140
+fat_copy dst=/home/rafael/Músicas/CircleIICircle - Watching.mp3 first_cluster=127195 (4078464) size=6368202
+fat_copy dst=/home/rafael/Músicas/Coldplay - Clocks.mp3 first_cluster=127859 (4099712) size=4920600
+fat_copy dst=/home/rafael/Músicas/Coração Radiante.mp3 first_cluster=128410 (4117344) size=3775929
+fat_copy dst=/home/rafael/Músicas/Crawl.mp3 first_cluster=128756 (4128416) size=4790516
+fat_copy dst=/home/rafael/Músicas/Dance music - Maxima FM summer top 2010.mp3 first_cluster=129278 (4145120) size=12001408
+fat_copy dst=/home/rafael/Músicas/Victor e Leo - Deixa eu te amar.mp3 first_cluster=130469 (4183232) size=4468091
+fat_copy dst=/home/rafael/Músicas/Detonautas » Quando o sol se for.mp3 first_cluster=130980 (4199584) size=5026197
+fat_copy dst=/home/rafael/Músicas/disco, 70s %26 80s - donna summers - hot stuff.mp3 first_cluster=131518 (4216800) size=3659244
+fat_copy dst=/home/rafael/Músicas/Divinyls - I Touch Myself.mp3 first_cluster=131963 (4231040) size=3596538
+fat_copy dst=/home/rafael/Músicas/Do Seu Lado.mp3 first_cluster=132316 (4242336) size=4637342
+fat_copy dst=/home/rafael/Músicas/E Pra Sempre Te Amar.mp3 first_cluster=132876 (4260256) size=5688291
+fat_copy dst=/home/rafael/Músicas/Edguy - 04 Judas At The Opera (1).mp3 first_cluster=133508 (4280480) size=10596867
+fat_copy dst=/home/rafael/Músicas/Edguy - Superheroes (1).mp3 first_cluster=134692 (4318368) size=4597378
+fat_copy dst=/home/rafael/Músicas/Edguy - The Spirit.mp3 first_cluster=135092 (4331168) size=6537728
+fat_copy dst=/home/rafael/Músicas/Ela Me Faz Tão Bem.mp3 first_cluster=135881 (4356416) size=4970330
+fat_copy dst=/home/rafael/Músicas/Engenheiros do Hawaii - Acústico MTV - 08 - 3x4.mp3 first_cluster=136330 (4370784) size=3031040
+fat_copy dst=/home/rafael/Músicas/Eu Vou Tentar.mp3 first_cluster=136782 (4385248) size=7256192
+fat_copy dst=/home/rafael/Músicas/fada - vitor e leo.mp3 first_cluster=137365 (4403904) size=3628852
+fat_copy dst=/home/rafael/Músicas/Feitiço.mp3 first_cluster=137856 (4419616) size=3474393
+fat_copy dst=/home/rafael/Músicas/Feliz Aniversario.mp3 first_cluster=138206 (4430816) size=3176974
+fat_copy dst=/home/rafael/Músicas/Fica Comigo Agora.mp3 first_cluster=138525 (4441024) size=4317411
+fat_copy dst=/home/rafael/Músicas/Fica Comigo.mp3 first_cluster=138923 (4453760) size=5990235
+fat_copy dst=/home/rafael/Músicas/Victor e Leo - Ficar por ficar.mp3 first_cluster=139553 (4473920) size=4727650
+fat_copy dst=/home/rafael/Músicas/Fico Assim Sem Voce.mp3 first_cluster=139853 (4483520) size=3553750
+fat_copy dst=/home/rafael/Músicas/Fico Assim Sem Você.mp3 first_cluster=9008 (296480) size=2743032
+fat_copy dst=/home/rafael/Músicas/Finganforn.mp3 first_cluster=140258 (4496480) size=2913262
+fat_copy dst=/home/rafael/Músicas/Foo Fighters - Everlong.mp3 first_cluster=140447 (4502528) size=4016564
+fat_copy dst=/home/rafael/Músicas/Victor e Leo - Fotos.mp3 first_cluster=140707 (4510848) size=4133242
+fat_copy dst=/home/rafael/Músicas/Four Non Blonds - What's Going On.mp3 first_cluster=141020 (4520864) size=4719432
+fat_copy dst=/home/rafael/Músicas/frio da solidao - victor e leo.mp3 first_cluster=141374 (4532192) size=4050582
+fat_copy dst=/home/rafael/Músicas/Fui.mp3 first_cluster=141866 (4547936) size=3122294
+fat_copy dst=/home/rafael/Músicas/Gabriel, O Pensador - Até Quando (1).mp3 first_cluster=142181 (4558016) size=4153893
+fat_copy dst=/home/rafael/Músicas/Gauchescas - Grupo Manotaço - De Rodeio a Rodeio.mp3 first_cluster=142570 (4570464) size=4015584
+fat_copy dst=/home/rafael/Músicas/Girls And Boys.wma first_cluster=143039 (4585472) size=1485345
+fat_copy dst=/home/rafael/Músicas/Grupo Rodeio - Gauchos de Fato.mp3 first_cluster=143250 (4592224) size=3788981
+fat_copy dst=/home/rafael/Músicas/guns and roses - sweet child - sweet child of mine.mp3 first_cluster=143601 (4603456) size=5703437
+fat_copy dst=/home/rafael/Músicas/Gunsnroses-jumping-jack-flash(acoustic).mp3 first_cluster=144174 (4621792) size=3775391
+fat_copy dst=/home/rafael/Músicas/Gypsy Kings - El Mariachi (Desperado).mp3 first_cluster=144627 (4636288) size=2028032
+fat_copy dst=/home/rafael/Músicas/Helloween - I Can.mp3 first_cluster=144862 (4643808) size=4474994
+fat_copy dst=/home/rafael/Músicas/Hoje Eu Vou Beijar Voce.mp3 first_cluster=145278 (4657120) size=2359841
+fat_copy dst=/home/rafael/Músicas/jhon bon jovi - every day430.mp3 first_cluster=145469 (4663232) size=7291053
+fat_copy dst=/home/rafael/Músicas/Joe Cocker - You Can Leave Your Hat On.mp3 first_cluster=146067 (4682368) size=4095010
+fat_copy dst=/home/rafael/Músicas/Jovem Pan - Na Balada 13 - CD 01 - 02 - Alex Gaudino Feat. Crystal Waters - Destination Calabria.mp3 first_cluster=146389 (4692672) size=3666381
+fat_copy dst=/home/rafael/Músicas/Jovem Pan Na Balada 2010 - Candy - Moving On Up.mp3 first_cluster=146715 (4703104) size=5399346
+fat_copy dst=/home/rafael/Músicas/Jovem Pan Na Balada 2010 - D Mixmaster - Bad Romance.mp3 first_cluster=147146 (4716896) size=7802408
+fat_copy dst=/home/rafael/Músicas/Jovem Pan Na Balada 2010 - Dennis Ferrer - Hey Hey.mp3 first_cluster=147804 (4737952) size=5726695
+fat_copy dst=/home/rafael/Músicas/JoãO Luis Correa - Parando Rodeio.mp3 first_cluster=148261 (4752576) size=2867338
+fat_copy dst=/home/rafael/Músicas/João Luís Corrêa - Velha Morada.mp3 first_cluster=148505 (4760384) size=3121996
+fat_copy dst=/home/rafael/Músicas/Katy Perry - ho'n'cold.mp3 first_cluster=148771 (4768896) size=5283968
+fat_copy dst=/home/rafael/Músicas/Lady GaGa - Poker Face.mp3 first_cluster=149197 (4782528) size=1810560
+fat_copy dst=/home/rafael/Músicas/Lady Gaga Feat Akon - JustDance.mp3 first_cluster=149377 (4788288) size=3788277
+fat_copy dst=/home/rafael/Músicas/Land Of Youth (Tir Nan Og).mp3 first_cluster=149721 (4799296) size=4088981
+fat_copy dst=/home/rafael/Músicas/Latino - Catia Catchaca.mp3 first_cluster=150070 (4810464) size=3717373
+fat_copy dst=/home/rafael/Músicas/Latino - Vagalume.mp3 first_cluster=150372 (4820128) size=5784623
+fat_copy dst=/home/rafael/Músicas/Madonna - Like a prayer.mp3 first_cluster=150867 (4835968) size=5605250
+fat_copy dst=/home/rafael/Músicas/madona - madonna - like a virgin147439.mp3 first_cluster=151288 (4849440) size=3058207
+fat_copy dst=/home/rafael/Músicas/Mandrake e Os Cubanos.mp3 first_cluster=151494 (4856032) size=2432045
+fat_copy dst=/home/rafael/Músicas/marvin gaye - barry white - you sexy thing.mp3 first_cluster=151656 (4861216) size=3363200
+fat_copy dst=/home/rafael/Músicas/Mason - Exceeder(1).mp3 first_cluster=86750 (2784224) size=14143783
+fat_copy dst=/home/rafael/Músicas/Mason Vs Princess Superstar - Perfect Exceeder (Radio Edit).mp3 first_cluster=152792 (4897568) size=3401728
+fat_copy dst=/home/rafael/Músicas/Memories (ft kid cudi).mp3 first_cluster=153010 (4904544) size=5094667
+fat_copy dst=/home/rafael/Músicas/Victor e Leo - Meu eu em vc.mp3 first_cluster=153337 (4915008) size=4131466
+fat_copy dst=/home/rafael/Músicas/Michael Sembello (Flash Dance) - She's A Maniac.mp3 first_cluster=153602 (4923488) size=4042501
+fat_copy dst=/home/rafael/Músicas/Micheal Jackson - Beat It.mp3 first_cluster=153883 (4932480) size=2063692
+fat_copy dst=/home/rafael/Músicas/Skank - Mil Acasos.mp3 first_cluster=154024 (4936992) size=4619674
+fat_copy dst=/home/rafael/Músicas/Missing You.mp3 first_cluster=154332 (4946848) size=6443872
+fat_copy dst=/home/rafael/Músicas/Mr Big - To Be With You.mp3 first_cluster=154766 (4960736) size=4098606
+fat_copy dst=/home/rafael/Músicas/Muita Calma Nessa Hora.mp3 first_cluster=155037 (4969408) size=2759911
+fat_copy dst=/home/rafael/Músicas/Musical JM - Amor Mafioso.mp3 first_cluster=155224 (4975392) size=4331486
+fat_copy dst=/home/rafael/Músicas/Musical JM - Devolva o Silicone.MP3 first_cluster=155510 (4984544) size=2747630
+fat_copy dst=/home/rafael/Músicas/Musical JM - Gordinha .mp3 first_cluster=155692 (4990368) size=3050650
+fat_copy dst=/home/rafael/Músicas/Musical JM - Pegando o %c3%94nibus.mp3 first_cluster=155893 (4996800) size=5240270
+fat_copy dst=/home/rafael/Músicas/Musical jm - primeiro baile1.mp3 first_cluster=156318 (5010400) size=3387280
+fat_copy dst=/home/rafael/Músicas/Victor e Leo - Nada Normal.mp3 first_cluster=156633 (5020480) size=6058216
+fat_copy dst=/home/rafael/Músicas/Nao Lembrou.mp3 first_cluster=157138 (5036640) size=3784832
+fat_copy dst=/home/rafael/Músicas/No Air (duet with jordin sparks).mp3 first_cluster=157431 (5046016) size=7198347
+fat_copy dst=/home/rafael/Músicas/No Doubt - It's My Life.mp3 first_cluster=157971 (5063296) size=3624810
+fat_copy dst=/home/rafael/Músicas/No Doubt - Just A Girl(1).mp3 first_cluster=158256 (5072416) size=3411778
+fat_copy dst=/home/rafael/Músicas/No More Mr Nice Guy.mp3 first_cluster=158571 (5082496) size=4428532
+fat_copy dst=/home/rafael/Músicas/Nova Ordem.mp3 first_cluster=158957 (5094848) size=4901066
+fat_copy dst=/home/rafael/Músicas/Nunca Mais.mp3 first_cluster=159402 (5109088) size=3563188
+fat_copy dst=/home/rafael/Músicas/Victor e Leo - O granfino e o caipira.mp3 first_cluster=86182 (2766048) size=9292948
+fat_copy dst=/home/rafael/Músicas/O Que Eu Também Não Entendo.mp3 first_cluster=160450 (5142624) size=3618816
+fat_copy dst=/home/rafael/Músicas/O Sol.mp3 first_cluster=160811 (5154176) size=7519150
+fat_copy dst=/home/rafael/Músicas/Oficina G3 - Te Escolhi.mp3 first_cluster=161419 (5173632) size=2893952
+fat_copy dst=/home/rafael/Músicas/Oforia - Psy.mp3 first_cluster=161668 (5181600) size=2312576
+fat_copy dst=/home/rafael/Músicas/Oh My God.mp3 first_cluster=161883 (5188480) size=5691230
+fat_copy dst=/home/rafael/Músicas/Only Girl.mp3 first_cluster=162376 (5204256) size=9468909
+fat_copy dst=/home/rafael/Músicas/Palavras De Um Futuro Bom.mp3 first_cluster=163134 (5228512) size=7001998
+fat_copy dst=/home/rafael/Músicas/Papas da Língua - Blusinha Branca.mp3 first_cluster=163750 (5248224) size=2980232
+fat_copy dst=/home/rafael/Músicas/Papas da Língua - lua cheia.mp3 first_cluster=164008 (5256480) size=4167680
+fat_copy dst=/home/rafael/Músicas/Papas da Língua - Vou Ligar.mp3 first_cluster=164374 (5268192) size=2879488
+fat_copy dst=/home/rafael/Músicas/Para de Falar Tanta Besteira - Part. Rodriguinho.mp3 first_cluster=164622 (5276128) size=3444029
+fat_copy dst=/home/rafael/Músicas/Victor e Leo - Paraiso.mp3 first_cluster=164906 (5285216) size=8362744
+fat_copy dst=/home/rafael/Músicas/Paranoid.mp3 first_cluster=165575 (5306624) size=2393984
+fat_copy dst=/home/rafael/Músicas/Pink - Dont let me get me.mp3 first_cluster=165726 (5311456) size=5061427
+fat_copy dst=/home/rafael/Músicas/Pink - Just like a pill(1).mp3 first_cluster=166043 (5321600) size=3784240
+fat_copy dst=/home/rafael/Músicas/Pink - Who Knew.mp3 first_cluster=166287 (5329408) size=5012295
+fat_copy dst=/home/rafael/Músicas/Pitty - Admiravel Chip Novo.mp3 first_cluster=166702 (5342688) size=3835865
+fat_copy dst=/home/rafael/Músicas/Pitty - Equalize.mp3 first_cluster=167008 (5352480) size=3716066
+fat_copy dst=/home/rafael/Músicas/Pixies - Here Comes Your Man.mp3 first_cluster=167345 (5363264) size=4024119
+fat_copy dst=/home/rafael/Músicas/Pode Ir Embora.mp3 first_cluster=167663 (5373440) size=3506304
+fat_copy dst=/home/rafael/Músicas/Policia e Bandido.mp3 first_cluster=167951 (5382656) size=4885151
+fat_copy dst=/home/rafael/Músicas/Pra Que Mentir.mp3 first_cluster=168452 (5398688) size=3086464
+fat_copy dst=/home/rafael/Músicas/Victor e leo - Preciso te dizer.mp3 first_cluster=168797 (5409728) size=3709942
+fat_copy dst=/home/rafael/Músicas/que vida boa - victor e leo.mp3 first_cluster=169183 (5422080) size=3006842
+fat_copy dst=/home/rafael/Músicas/Queen - Its A Kind Of Magic.mp3 first_cluster=169528 (5433120) size=4201547
+fat_copy dst=/home/rafael/Músicas/quem de nois dois - victor e leo.mp3 first_cluster=170105 (5451584) size=4284961
+fat_copy dst=/home/rafael/Músicas/Ramones - Pet Cemetary.mp3 first_cluster=170451 (5462656) size=3379029
+fat_copy dst=/home/rafael/Músicas/Ramstein - Amerika (D Version).mp3 first_cluster=170952 (5478688) size=5353892
+fat_copy dst=/home/rafael/Músicas/Raul Seixas - Carimbador maluco(1).mp3 first_cluster=171418 (5493600) size=2256896
+fat_copy dst=/home/rafael/Músicas/red hot chili peppers - californication - californication.mp3 first_cluster=171710 (5502944) size=7712674
+fat_copy dst=/home/rafael/Músicas/red hot chili peppers - city of angels.mp3 first_cluster=172458 (5526880) size=4229295
+fat_copy dst=/home/rafael/Músicas/Red Hot Chili Peppers - Love Rollercoaster.mp3 first_cluster=172991 (5543936) size=4409853
+fat_copy dst=/home/rafael/Músicas/red hot chili peppers - scar tissue.mp3 first_cluster=173576 (5562656) size=3477748
+fat_copy dst=/home/rafael/Músicas/Red Hot Chili Peppers - Wet Sand - Stadium Arcadium.mp3 first_cluster=173930 (5573984) size=4441618
+fat_copy dst=/home/rafael/Músicas/red hot chilli peppers - by the way.mp3 first_cluster=174360 (5587744) size=4125973
+fat_copy dst=/home/rafael/Músicas/Red Hot Chilli Peppers - Cant Stop.mp3 first_cluster=174927 (5605888) size=6620281
+fat_copy dst=/home/rafael/Músicas/Red Hot Chilli Peppers - Dani California.mp3 first_cluster=175632 (5628448) size=5014693
+fat_copy dst=/home/rafael/Músicas/red_hot_chili_peppers-tell_me_baby.mp3 first_cluster=176092 (5643168) size=5741483
+fat_copy dst=/home/rafael/Músicas/RightNow.mp3 first_cluster=176759 (5664512) size=4698900
+fat_copy dst=/home/rafael/Músicas/Rios de Amor.mp3 first_cluster=177204 (5678752) size=3285882
+fat_copy dst=/home/rafael/Músicas/Rolling Stones - Jumping Jack Flash.mp3 first_cluster=177556 (5690016) size=4511744
+fat_copy dst=/home/rafael/Músicas/Ronei___Solid_o.mp3 first_cluster=178148 (5708960) size=3428731
+fat_copy dst=/home/rafael/Músicas/rosas - victor e leo.mp3 first_cluster=178511 (5720576) size=2499808
+fat_copy dst=/home/rafael/Músicas/roxette - dressed for success.mp3 first_cluster=178823 (5730560) size=6116558
+fat_copy dst=/home/rafael/Músicas/roxette - fading like a flower.mp3 first_cluster=179230 (5743584) size=3696977
+fat_copy dst=/home/rafael/Músicas/Roxette - How Do You Do.mp3 first_cluster=179566 (5754336) size=3016704
+fat_copy dst=/home/rafael/Músicas/roxette - joyride.mp3 first_cluster=179821 (5762496) size=4200524
+fat_copy dst=/home/rafael/Músicas/roxette - listen to your heart.mp3 first_cluster=180168 (5773600) size=5243715
+fat_copy dst=/home/rafael/Músicas/Roxette - The Look.mp3 first_cluster=180548 (5785760) size=5742902
+fat_copy dst=/home/rafael/Músicas/Run It.mp3 first_cluster=181008 (5800480) size=2754894
+fat_copy dst=/home/rafael/Músicas/San_Marino_-_Preciso_te_falar(1).mp3 first_cluster=181230 (5807584) size=2987052
+fat_copy dst=/home/rafael/Músicas/Sapatinho.mp3 first_cluster=181487 (5815808) size=2625742
+fat_copy dst=/home/rafael/Músicas/Saudades do Amor.mp3 first_cluster=181692 (5822368) size=5002464
+fat_copy dst=/home/rafael/Músicas/scorpion-eyes of the tiger.mp3 first_cluster=182059 (5834112) size=3690963
+fat_copy dst=/home/rafael/Músicas/Se For Embora.mp3 first_cluster=182342 (5843168) size=4610170
+fat_copy dst=/home/rafael/Músicas/Se Liga.mp3 first_cluster=182684 (5854112) size=2951168
+fat_copy dst=/home/rafael/Músicas/se parece um anjo armandinho.mp3 first_cluster=182925 (5861824) size=3672064
+fat_copy dst=/home/rafael/Músicas/seal - kiss from a rose.mp3 first_cluster=183211 (5870976) size=4606617
+fat_copy dst=/home/rafael/Músicas/Segredos.mp3 first_cluster=183551 (5881856) size=3738826
+fat_copy dst=/home/rafael/Músicas/Segura Onda.mp3 first_cluster=183840 (5891104) size=2775183
+fat_copy dst=/home/rafael/Músicas/Seis e Trinta.mp3 first_cluster=184050 (5897824) size=4459146
+fat_copy dst=/home/rafael/Músicas/Sempre Assim.mp3 first_cluster=184381 (5908416) size=3833374
+fat_copy dst=/home/rafael/Músicas/Shakira - Antologia.mp3 first_cluster=184674 (5917792) size=4083599
+fat_copy dst=/home/rafael/Músicas/Shakira - Estoy Aqui.mp3 first_cluster=185030 (5929184) size=3770002
+fat_copy dst=/home/rafael/Músicas/Shakira - Inevitable(2).mp3 first_cluster=185336 (5938976) size=3099969
+fat_copy dst=/home/rafael/Músicas/Shakira - Ojos Asi.mp3 first_cluster=185636 (5948576) size=3787650
+fat_copy dst=/home/rafael/Músicas/shakira - pies descalzos - pies descalzos.mp3 first_cluster=185935 (5958144) size=3333468
+fat_copy dst=/home/rafael/Músicas/Shakira - Whenever Wherever.mp3 first_cluster=186204 (5966752) size=6244352
+fat_copy dst=/home/rafael/Músicas/Shania Twain - Man! I Feel Like A Woman!.mp3 first_cluster=186729 (5983552) size=3720570
+fat_copy dst=/home/rafael/Músicas/shania twain - man%21 i feel like a woman%21.mp3 first_cluster=187064 (5994272) size=3720826
+fat_copy dst=/home/rafael/Músicas/Simply the Best.mp3 first_cluster=187333 (6002880) size=4006266
+fat_copy dst=/home/rafael/Músicas/Sina.mp3 first_cluster=187649 (6012992) size=4119019
+fat_copy dst=/home/rafael/Músicas/sinto falta de voce - victor e leo.mp3 first_cluster=187997 (6024128) size=3317010
+fat_copy dst=/home/rafael/Músicas/Skid Row - I Remember You.mp3 first_cluster=188263 (6032640) size=5030104
+fat_copy dst=/home/rafael/Músicas/Smoke on the water-Deep Purple.mp3 first_cluster=188707 (6046848) size=5428438
+fat_copy dst=/home/rafael/Músicas/sonata arctica - i want out.mp3 first_cluster=189144 (6060832) size=3724897
+fat_copy dst=/home/rafael/Músicas/sonata arctica - peacemaker.mp3 first_cluster=189448 (6070560) size=3315712
+fat_copy dst=/home/rafael/Músicas/sonata arctica - wolf and raven.mp3 first_cluster=189691 (6078336) size=6230016
+fat_copy dst=/home/rafael/Músicas/sonata artica - silence - san sebastian.mp3 first_cluster=190171 (6093696) size=4590490
+fat_copy dst=/home/rafael/Músicas/sonata artica - the power of one.mp3 first_cluster=64289 (2065472) size=11197265
+fat_copy dst=/home/rafael/Músicas/Steppenwolf - Born To Be Wild (Live).mp3 first_cluster=191335 (6130944) size=2747750
+fat_copy dst=/home/rafael/Músicas/supertramp - the logical song (1).mp3 first_cluster=191562 (6138208) size=3632749
+fat_copy dst=/home/rafael/Músicas/Sutilmente.mp3 first_cluster=191823 (6146560) size=3877993
+fat_copy dst=/home/rafael/Músicas/Só Os Loucos Sabem.mp3 first_cluster=192098 (6155360) size=3371136
+fat_copy dst=/home/rafael/Músicas/Ta Vendo Aquela Lua.mp3 first_cluster=192373 (6164160) size=3766400
+fat_copy dst=/home/rafael/Músicas/Tarde Vazia.mp3 first_cluster=192660 (6173344) size=6203879
+fat_copy dst=/home/rafael/Músicas/Tchubirabirom.mp3 first_cluster=193140 (6188704) size=2954368
+fat_copy dst=/home/rafael/Músicas/telefone mudo - victor e leo.mp3 first_cluster=193384 (6196512) size=2806720
+fat_copy dst=/home/rafael/Músicas/tem que ser voce - victor e leo.mp3 first_cluster=193597 (6203328) size=4485582
+fat_copy dst=/home/rafael/Músicas/Tempo ao Tempo.mp3 first_cluster=193953 (6214720) size=4768522
+fat_copy dst=/home/rafael/Músicas/Tente Outra Vez.mp3 first_cluster=194326 (6226656) size=3051716
+fat_copy dst=/home/rafael/Músicas/The Corrs - Breathless.mp3 first_cluster=194552 (6233888) size=3304105
+fat_copy dst=/home/rafael/Músicas/The Cranberries - Linger.mp3 first_cluster=194814 (6242272) size=4397476
+fat_copy dst=/home/rafael/Músicas/the cranberries - zombie.mp3 first_cluster=195165 (6253504) size=4632626
+fat_copy dst=/home/rafael/Músicas/The Dance of the Little Ones.mp3 first_cluster=195527 (6265088) size=4049693
+fat_copy dst=/home/rafael/Músicas/The Divinyls - I Touch Myself.mp3 first_cluster=195837 (6275008) size=3638839
+fat_copy dst=/home/rafael/Músicas/The Doors - Roadhouse Blues.mp3 first_cluster=196154 (6285152) size=7722388
+fat_copy dst=/home/rafael/Músicas/The Last Words.mp3 first_cluster=196763 (6304640) size=5316527
+fat_copy dst=/home/rafael/Músicas/The Time (The Dirty Bit).mp3 first_cluster=197171 (6317696) size=7442912
+fat_copy dst=/home/rafael/Músicas/Tire a Camisa.mp3 first_cluster=197795 (6337664) size=2674688
+fat_copy dst=/home/rafael/Músicas/To Passando Mal.mp3 first_cluster=198029 (6345152) size=4604628
+fat_copy dst=/home/rafael/Músicas/Track 01_0217112022.mp3 first_cluster=198414 (6357472) size=6371456
+fat_copy dst=/home/rafael/Músicas/Track 02_0217112147.mp3 first_cluster=198947 (6374528) size=3741824
+fat_copy dst=/home/rafael/Músicas/Track 03_0217112249.mp3 first_cluster=199281 (6385216) size=4542592
+fat_copy dst=/home/rafael/Músicas/Track 04_0217112346.mp3 first_cluster=199661 (6397376) size=4151424
+fat_copy dst=/home/rafael/Músicas/Track 05_0217112524.mp3 first_cluster=200011 (6408576) size=6271104
+fat_copy dst=/home/rafael/Músicas/Track 06_0217112618.mp3 first_cluster=200542 (6425568) size=4018304
+fat_copy dst=/home/rafael/Músicas/Track 07_0217112743.mp3 first_cluster=200861 (6435776) size=3240064
+fat_copy dst=/home/rafael/Músicas/Track 08_0217112840.mp3 first_cluster=201135 (6444544) size=5875840
+fat_copy dst=/home/rafael/Músicas/Track 09_0217113021.mp3 first_cluster=201591 (6459136) size=5073024
+fat_copy dst=/home/rafael/Músicas/Track 10_0217113111.mp3 first_cluster=202035 (6473344) size=4014208
+fat_copy dst=/home/rafael/Músicas/Track 11_0217113141.mp3 first_cluster=202356 (6483616) size=4204672
+fat_copy dst=/home/rafael/Músicas/Track 12_0217113226.mp3 first_cluster=202724 (6495392) size=5392512
+fat_copy dst=/home/rafael/Músicas/Track 13_0217113310.mp3 first_cluster=203203 (6510720) size=4014208
+fat_copy dst=/home/rafael/Músicas/Track 14.mp3 first_cluster=203559 (6522112) size=4380800
+fat_copy dst=/home/rafael/Músicas/Tudo Me Faz Lembrar Você.mp3 first_cluster=203938 (6534240) size=3598715
+fat_copy dst=/home/rafael/Músicas/twisted sister - twister sister - were not gonna take it.mp3 first_cluster=204232 (6543648) size=3483655
+fat_copy dst=/home/rafael/Músicas/Tá Escrito.mp3 first_cluster=63703 (2046720) size=9585817
+fat_copy dst=/home/rafael/Músicas/ub 40 %26 bob marley- a lalala lon.mp3 first_cluster=205333 (6578880) size=3598177
+fat_copy dst=/home/rafael/Músicas/Ugly Kid Joe - I Hate Everything About You.mp3 first_cluster=204845 (6563264) size=4245349
+fat_copy dst=/home/rafael/Músicas/Valeu.mp3 first_cluster=205998 (6600160) size=2972199
+fat_copy dst=/home/rafael/Músicas/Van Halen - Can't Stop Loving You.mp3 first_cluster=206254 (6608352) size=3960547
+fat_copy dst=/home/rafael/Músicas/Van Halen - Jump.mp3 first_cluster=206606 (6619616) size=3884192
+fat_copy dst=/home/rafael/Músicas/Van Halen - Panama.mp3 first_cluster=206918 (6629600) size=3390450
+fat_copy dst=/home/rafael/Músicas/Weezer - Buddy Holly (2).mp3 first_cluster=207199 (6638592) size=6375552
+fat_copy dst=/home/rafael/Músicas/Whitesnake - Fool For Your Loving.mp3 first_cluster=207737 (6655808) size=4118656
+fat_copy dst=/home/rafael/Músicas/With You.mp3 first_cluster=208100 (6667424) size=6469148
+fat_copy dst=/home/rafael/Músicas/zeze di camargo e luciano - pÃ£o de mel.mp3 first_cluster=12037 (393408) size=3365360
+fat_copy dst=/home/rafael/Músicas/[ jett 2010] house techno minimal 0daymusic Fernando Ferreyra - Disappointed (Claudio Climaco rem.mp3 first_cluster=61374 (1972192) size=17119640
+fat_copy dst=/home/rafael/Músicas/_0_DJM~1.MP3 first_cluster=210334 (6738912) size=5135921
+fat_copy dst=/home/rafael/Músicas/Karametade - Louca Sedução.mp3 first_cluster=210763 (6752640) size=2142208
+fat_copy dst=/home/rafael/Músicas/_AC�ST~1.MP3 first_cluster=210971 (6759296) size=4141056
+fat_copy dst=/home/rafael/Músicas/_CESAR~1.MP3 first_cluster=211331 (6770816) size=1712703
+fat_copy dst=/home/rafael/Músicas/_CESAR~2.MP3 first_cluster=211472 (6775328) size=1628413
+fat_copy dst=/home/rafael/Músicas/_CESAR~3.MP3 first_cluster=211609 (6779712) size=2156296
+FAT: cluster=15207(0x3b67), pos=502912
+fat_copy dst=/home/rafael/Músicas/Fernando e Sorocaba - Sua Casa Caiu.mp3 first_cluster=68381 (2196416) size=3973269
+fat_copy dst=/home/rafael/Músicas/Saia E Bicicletinha.mp3 first_cluster=68624 (2204192) size=6051433
+fat_copy dst=/home/rafael/Músicas/Fernando & Sorocaba - Bala De Prata.mp3 first_cluster=69522 (2232928) size=3578193
+fat_copy dst=/home/rafael/Músicas/Lady Gaga Poker Face.mp3 first_cluster=69199 (2222592) size=5285846
+fat_copy dst=/home/rafael/Músicas/Zeze Di Camargo e Luciano - Pra Mudar Minha Vida.mp3 first_cluster=4205 (142784) size=6487420
+fat_copy dst=/home/rafael/Músicas/Lady Gaga Poker Face 2010 (Faixa do novo Cd Summer Eletrohits vol. 06 da Som Livre ( Re.mp3 first_cluster=4601 (155456) size=5282006
+fat_copy dst=/home/rafael/Músicas/San Marino- Preciso te falar.mp3 first_cluster=73523 (2360960) size=2987052
+fat_copy dst=/home/rafael/Músicas/Papas da Lingua - Ela vai passar.mp3 first_cluster=73706 (2366816) size=3499120
+fat_copy dst=/home/rafael/Músicas/Papas Da Língua - Eu Sei.mp3 first_cluster=74710 (2398944) size=3629278
+fat_copy dst=/home/rafael/Músicas/Zeze di Camargo e Luciano - Tudo de novo.mp3 first_cluster=9598 (315360) size=4662891
+fat_copy dst=/home/rafael/Músicas/Cesar Menoti E Fabiano - Caso Marcado.mp3 first_cluster=9883 (324480) size=3182649
+fat_copy dst=/home/rafael/Músicas/Zeze di Camargo e Luciano - Pra desbotar a saudade.mp3 first_cluster=10078 (330720) size=3437589
+fat_copy dst=/home/rafael/Músicas/Bonde do Forró - Saia e Bicicletinha.mp3 first_cluster=65552 (2105888) size=3308463
+fat_copy dst=/home/rafael/Músicas/Cesar Menoti e Fabiano - Eu falo sério.MP3 first_cluster=326 (18656) size=6015356
+fat_copy dst=/home/rafael/Músicas/Cesar Menotti e Fabiano - Feiticeira.mp3 first_cluster=905 (37184) size=1806464
+fat_copy dst=/home/rafael/Músicas/Engenheiros do Awaii - Refrao de Bolero.mp3 first_cluster=66552 (2137888) size=4874602
+fat_copy dst=/home/rafael/Músicas/Tche Garotos - To Voltando Pra Ficar.mp3 first_cluster=66850 (2147424) size=3172276
+fat_copy dst=/home/rafael/Músicas/Grupo Rodeio - Iguaria Campeira.mp3 first_cluster=67989 (2183872) size=2912256
+fat_copy dst=/home/rafael/Músicas/Papas da Língua - Vem pra cá.mp3 first_cluster=68167 (2189568) size=3493619
+fat_copy dst=/home/rafael/Músicas/DjMauroC - love.mp3 first_cluster=210334 (6738912) size=5135921
+fat_copy dst=/home/rafael/Músicas/Engenheiros do Hawaii - Infinita Highway.mp3 first_cluster=210971 (6759296) size=4141056
+fat_copy dst=/home/rafael/Músicas/Cesar Menoti e Fabiano - Coração esta em pedaços.mp3 first_cluster=14723 (479360) size=1712703
+fat_copy dst=/home/rafael/Músicas/Cesar Menoti e Fabiano - Nova York.mp3 first_cluster=14864 (483872) size=1628413
+fat_copy dst=/home/rafael/Músicas/Cesar Menoti e Fabiano - To por ai.mp3 first_cluster=15001 (488256) size=2156296
+fat_copy dst=/home/rafael/Músicas/Grupo Rodeio - Cheiro De Terra.mp3 first_cluster=76026 (2441056) size=3002705
+fat_copy dst=/home/rafael/Músicas/Hugo Pena e Gabriel - Fora do Eixos.mp3 first_cluster=76875 (2468224) size=3062341
+fat_copy dst=/home/rafael/Músicas/Karametade - Toda Mulher.mp3 first_cluster=76579 (2458752) size=4848399
+fat_copy dst=/home/rafael/Músicas/Engenheiros do Hawaii-Acustico MTV.mp3 first_cluster=77375 (2484224) size=3031927
+fat_copy dst=/home/rafael/Músicas/Engenheiros do Hawaii - Dom Quixote.mp3 first_cluster=77561 (2490176) size=3353343
+fat_copy dst=/home/rafael/Músicas/Dj Set Mix  Hot Party Hit Mania Dance Rem.mp3 first_cluster=54019 (1736832) size=42633970
+fat_copy dst=/home/rafael/Músicas/Engenheiros do Hawaii - Até o fim.mp3 first_cluster=78383 (2516480) size=3506176
+fat_copy dst=/home/rafael/Músicas/Roxette - You Don't Understand Me.mp3 first_cluster=80184 (2574112) size=6501613
+fat_copy dst=/home/rafael/Músicas/Grupo Rodeio - De tanto pelear.mp3 first_cluster=76210 (2446944) size=2863104
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - Last man standing.mp3 first_cluster=82467 (2647168) size=10091437
+fat_copy dst=/home/rafael/Músicas/Tche Barbaridade - O rio grande me criou.mp3 first_cluster=83886 (2692576) size=3002368
+fat_copy dst=/home/rafael/Músicas/Papas Da Língua - Pequeno Grande Amor.mp3 first_cluster=84070 (2698464) size=3447120
+fat_copy dst=/home/rafael/Músicas/Legião Urbana - Será.mp3 first_cluster=88605 (2843584) size=2370424
+fat_copy dst=/home/rafael/Músicas/Low Rider.mp3 first_cluster=89161 (2861376) size=933556
+fat_copy dst=/home/rafael/Músicas/Roxette - Vulnerable.mp3 first_cluster=90742 (2911968) size=6497851
+fat_copy dst=/home/rafael/Músicas/Roxette - I Don't Want to Get Hurt.mp3 first_cluster=91502 (2936288) size=6193178
+fat_copy dst=/home/rafael/Músicas/Mr Catra - A Gente Faz a Festa.mp3 first_cluster=95781 (3073216) size=4036993
+fat_copy dst=/home/rafael/Músicas/Bonde do Forró - Bicicletinha.mp3 first_cluster=109311 (3506176) size=4268224
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - Undivided.mp3 first_cluster=113694 (3646432) size=4768653
+fat_copy dst=/home/rafael/Músicas/Bon Jovi -  Everyday.mp3 first_cluster=113986 (3655776) size=3707558
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - Hook Me Up.mp3 first_cluster=114213 (3663040) size=4796344
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - Blaze Of Glory.mp3 first_cluster=115030 (3689184) size=8126928
+fat_copy dst=/home/rafael/Músicas/Bon Jov i - LayYourHandsOnMe.mp3 first_cluster=64973 (2087360) size=8719893
+fat_copy dst=/home/rafael/Músicas/Bon Jovi -TheseDays.mp3 first_cluster=121493 (3896000) size=7345580
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - Born To Me My Baby.mp3 first_cluster=122608 (3931680) size=4472832
+fat_copy dst=/home/rafael/Músicas/Donna Summers - Hot stuff.mp3 first_cluster=131518 (4216800) size=3659244
+fat_copy dst=/home/rafael/Músicas/Claudinho e Bochecha - Fico Assim Sem Voce.mp3 first_cluster=139853 (4483520) size=3553750
+fat_copy dst=/home/rafael/Músicas/victor e leo.mp3 first_cluster=141374 (4532192) size=4050582
+fat_copy dst=/home/rafael/Músicas/Victor e Leo - Frio da Solidão.mp3 first_cluster=141374 (4532192) size=4050582
+fat_copy dst=/home/rafael/Músicas/Exaltasamba - Fui.mp3 first_cluster=141866 (4547936) size=3122294
+fat_copy dst=/home/rafael/Músicas/Gabriel, O Pensador - Até Quando.mp3 first_cluster=142181 (4558016) size=4153893
+fat_copy dst=/home/rafael/Músicas/Grupo Manotaço - De Rodeio a Rodeio.mp3 first_cluster=142570 (4570464) size=4015584
+fat_copy dst=/home/rafael/Músicas/Guns and roses - Sweet child of mine.mp3 first_cluster=143601 (4603456) size=5703437
+fat_copy dst=/home/rafael/Músicas/Guns and roses - Jumping.mp3 first_cluster=144174 (4621792) size=3775391
+fat_copy dst=/home/rafael/Músicas/Dj Tubarao - Hoje Eu Vou Beijar Voce.mp3 first_cluster=145278 (4657120) size=2359841
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - every day.mp3 first_cluster=145469 (4663232) size=7291053
+fat_copy dst=/home/rafael/Músicas/Jovem Pan  - Alex Gaudino Feat. Crystal Waters - Destination Calabria.mp3 first_cluster=146389 (4692672) size=3666381
+fat_copy dst=/home/rafael/Músicas/Jovem Pan - Candy - Moving On Up.mp3 first_cluster=146715 (4703104) size=5399346
+fat_copy dst=/home/rafael/Músicas/Jovem Pan - Bad Romance.mp3 first_cluster=147146 (4716896) size=7802408
+fat_copy dst=/home/rafael/Músicas/Lady Gaga - JustDance.mp3 first_cluster=149377 (4788288) size=3788277
+fat_copy dst=/home/rafael/Músicas/Lady Gaga -  Poker Face.mp3 first_cluster=69199 (2222592) size=5285846
+fat_copy dst=/home/rafael/Músicas/Bon Jovi - Lost Highway.mp3 first_cluster=77062 (2474208) size=5122176
+fat_copy dst=/home/rafael/Músicas/Madonna - Like a virgin.mp3 first_cluster=151288 (4849440) size=3058207
+fat_copy dst=/home/rafael/Músicas/Skank - Mandrake e Os Cubanos.mp3 first_cluster=151494 (4856032) size=2432045
+fat_copy dst=/home/rafael/Músicas/Michael Sembello - She's A Maniac.mp3 first_cluster=153602 (4923488) size=4042501
+fat_copy dst=/home/rafael/Músicas/Black Eyed Peas - Missing You.mp3 first_cluster=154332 (4946848) size=6443872
+fat_copy dst=/home/rafael/Músicas/Exaltasamba - Muita Calma Nessa Hora.mp3 first_cluster=155037 (4969408) size=2759911
+fat_copy dst=/home/rafael/Músicas/Chimarruts - Nao Lembrou.mp3 first_cluster=157138 (5036640) size=3784832
+fat_copy dst=/home/rafael/Músicas/Chris Brown - No Air.mp3 first_cluster=157431 (5046016) size=7198347
+fat_copy dst=/home/rafael/Músicas/Chimarruts - Nova Ordem.mp3 first_cluster=158957 (5094848) size=4901066
+fat_copy dst=/home/rafael/Músicas/Grupo Revelação - Nunca Mais.mp3 first_cluster=159402 (5109088) size=3563188
+fat_copy dst=/home/rafael/Músicas/Jota Quest - O Que Eu Também Não Entendo.mp3 first_cluster=160450 (5142624) size=3618816
+fat_copy dst=/home/rafael/Músicas/Chimarruts - O Sol.mp3 first_cluster=160811 (5154176) size=7519150
+fat_copy dst=/home/rafael/Músicas/Rhianna - Only Girl.mp3 first_cluster=85604 (2747552) size=9468909
+fat_copy dst=/home/rafael/Músicas/Jota Quest - Palavras De Um Futuro Bom.mp3 first_cluster=163134 (5228512) size=7001998
+fat_copy dst=/home/rafael/Músicas/Bruno e Marrone - Pode Ir Embora.mp3 first_cluster=167663 (5373440) size=3506304
+fat_copy dst=/home/rafael/Músicas/Marcelo D2 - Policia e Bandido.mp3 first_cluster=167951 (5382656) size=4885151
+fat_copy dst=/home/rafael/Músicas/Raça Negra - Pra Que Mentir.mp3 first_cluster=168452 (5398688) size=3086464
+fat_copy dst=/home/rafael/Músicas/Shaman - Over Your Head.mp3 first_cluster=214449 (6870592) size=6361721
+fat_copy dst=/home/rafael/Músicas/Shaman - Pride.mp3 first_cluster=214957 (6886848) size=4025330
+fat_copy dst=/home/rafael/Músicas/Shaman - Ritual.mp3 first_cluster=215293 (6897600) size=6358378
+fat_copy dst=/home/rafael/Músicas/Shaman - Time Will Come.mp3 first_cluster=215840 (6915104) size=5315152
+fat_copy dst=/home/rafael/Músicas/Shaman - Ancient Winds.mp3 first_cluster=211852 (6787488) size=3149705
+fat_copy dst=/home/rafael/Músicas/Shaman - Blind Spell.mp3 first_cluster=212121 (6796096) size=4386446
+fat_copy dst=/home/rafael/Músicas/Shaman - Distant Thunder.mp3 first_cluster=212524 (6808992) size=6122649
+fat_copy dst=/home/rafael/Músicas/Shaman - Fairy Tale.mp3 first_cluster=212979 (6823552) size=6665996
+fat_copy dst=/home/rafael/Músicas/Shaman - For Tomorrow.mp3 first_cluster=213486 (6839776) size=6516784
+fat_copy dst=/home/rafael/Músicas/Shaman - Here I Am.mp3 first_cluster=214009 (6856512) size=5710123
+FAT: Directory entry is marked as free.
+FAT: cluster=5221(0x1465), pos=183360
+FAT: cluster=8280(0x2058), pos=281248
+FAT: cluster=10913(0x2aa1), pos=365504
+FAT: cluster=13801(0x35e9), pos=457920
+FAT: cluster=16101(0x3ee5), pos=531520
+FAT: cluster=19248(0x4b30), pos=632224
+FAT: cluster=22019(0x5603), pos=720896
+FAT: cluster=25769(0x64a9), pos=840896
+FAT: cluster=263757(0x4064d), pos=8456512
+fat_copy dst=/home/rafael/Músicas/Carnevale - Tia Chica/01 O olhar do sonho e da loucura.mp3 first_cluster=266215 (8527104) size=193798
+fat_copy dst=/home/rafael/Músicas/Carnevale - Tia Chica/02 De que  lado.mp3 first_cluster=290594 (9307232) size=2935156
+fat_copy dst=/home/rafael/Músicas/Carnevale - Tia Chica/03 Há um tempo atrás.mp3 first_cluster=290774 (9312992) size=3398026
+fat_copy dst=/home/rafael/Músicas/Carnevale - Tia Chica/04 Qual é teu santo.mp3 first_cluster=290982 (9319648) size=4071064
+fat_copy dst=/home/rafael/Músicas/Carnevale - Tia Chica/05 Não sei pra onde vou.mp3 first_cluster=291231 (9327616) size=3980992
+fat_copy dst=/home/rafael/Músicas/Carnevale - Tia Chica/06 Na cova do Leão.mp3 first_cluster=291474 (9335392) size=3430969
+fat_copy dst=/home/rafael/Músicas/Carnevale - Tia Chica/07 Hoje Acordei.mp3 first_cluster=291684 (9342112) size=2807137
+fat_copy dst=/home/rafael/Músicas/Carnevale - Tia Chica/08 Nosso amor ficou no carnaval.mp3 first_cluster=291856 (9347616) size=3607777
+fat_copy dst=/home/rafael/Músicas/Carnevale - Tia Chica/09 Moinhos de Vento.mp3 first_cluster=292077 (9354688) size=2947249
+fat_copy dst=/home/rafael/Músicas/Carnevale - Tia Chica/10 No próximo verão.mp3 first_cluster=292257 (9360448) size=3097369
+fat_copy dst=/home/rafael/Músicas/Carnevale - Tia Chica/11 Entre santos e ladrões.mp3 first_cluster=292447 (9366528) size=2703304
+fat_copy dst=/home/rafael/Músicas/Carnevale - Tia Chica/12 Se minha vida fosse um Livro.mp3 first_cluster=292612 (9371808) size=4308337
+fat_copy dst=/home/rafael/Músicas/Carnevale - Tia Chica/13 Clara (Bonus Track).mp3 first_cluster=292875 (9380224) size=2478124
+FAT: cluster=7321(0x1c99), pos=250560
+fat_copy dst=/home/rafael/Músicas/Novas musicas/What It Takes-Aerosmith.mp3 first_cluster=7322 (242528) size=12427036
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Amazing-Aerosmith.mp3 first_cluster=8081 (266816) size=5689985
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Angel-Aerosmith.mp3 first_cluster=8429 (277952) size=6072320
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Animals-Martin Garrix.mp3 first_cluster=8800 (289824) size=9306129
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Bullit (Original Mix)-Watermat.mp3 first_cluster=9369 (308032) size=17091217
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Ca Plane Pour Mo-Plastic Bertrand.mp3 first_cluster=10413 (341440) size=4268032
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Counting Stars-OneRepublic.mp3 first_cluster=10674 (349792) size=4259840
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Crazy-Aerosmith.mp3 first_cluster=10934 (358112) size=5064704
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Da Ya Think I'm Sexy-Rod Stewart.mp3 first_cluster=11244 (368032) size=5267436
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Dream On-Aerosmith.mp3 first_cluster=11566 (378336) size=8495104
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Eat The Rich-Aerosmith.mp3 first_cluster=12085 (394944) size=3996640
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Falling In Love (Is Hard On The Knees)-Aerosmith.mp3 first_cluster=12329 (402752) size=4864125
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Fly Away from Here-Aerosmith.mp3 first_cluster=12626 (412256) size=7243776
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Full Circle-Aerosmith.mp3 first_cluster=13069 (426432) size=5987628
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Hole In My Soul-Aerosmith.mp3 first_cluster=355555 (11385984) size=5922816
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Home-Edward Sharpe and The Magnetic Zeros.mp3 first_cluster=412459 (13206912) size=7607381
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Honey Honey-ABBA.mp3 first_cluster=0 (4294975520) size=0
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Honey Honey-ABBA.mp3 first_cluster=329340 (10547104) size=4286464
+fat_copy dst=/home/rafael/Músicas/Novas musicas/I Dont Want To Miss A Thing-Aerosmith.mp3 first_cluster=13435 (438144) size=4786176
+fat_copy dst=/home/rafael/Músicas/Novas musicas/I Love It (feat. Charli XCX)-Icona Pop.mp3 first_cluster=69741 (2239936) size=2506752
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Isnt She Lovely-Stevie Wonder.mp3 first_cluster=13728 (447520) size=5244928
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Isn't She Lovely-Stevie Wonder.mp3 first_cluster=302236 (9679776) size=4831360
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Jaded-Aerosmith.mp3 first_cluster=75134 (2412512) size=5177344
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Kick Out The Epic Motherfker (Extended Vocal Mix)-Dada Life.mp3 first_cluster=14049 (457792) size=14072067
+fat_copy dst=/home/rafael/Músicas/Novas musicas/King (Extended Mix)-Ahzee.mp3 first_cluster=0 (4294975520) size=0
+fat_copy dst=/home/rafael/Músicas/Novas musicas/King (Extended Mix)-Ahzee.mp3 first_cluster=289291 (9265536) size=9433806
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Levels (Original Version)-Avicii.mp3 first_cluster=14908 (485280) size=14100480
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Livin' On The Edge ©1993-Aerosmith.mp3 first_cluster=15769 (512832) size=15411928
+fat_copy dst=/home/rafael/Músicas/Novas musicas/My Body (The Cube Guys Mix)-The Cube Guys, Marco Santoro.mp3 first_cluster=16710 (542944) size=16929304
+fat_copy dst=/home/rafael/Músicas/Novas musicas/No Milk Today -Herman's Hermits.mp3 first_cluster=17744 (576032) size=2830744
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Punching In A Dream-The Naked and Famous.mp3 first_cluster=289982 (9287648) size=3428243
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Rag Doll -Aerosmith.mp3 first_cluster=17917 (581568) size=4225019
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Rasputin-Boney M.mp3 first_cluster=262146 (8396896) size=5626688
+fat_copy dst=/home/rafael/Músicas/Novas musicas/So Long (NiCe7 Remix)-Larse.mp3 first_cluster=23924 (773792) size=14411600
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Some Velvet Morning-Primal Scream feat. Kate Moss.mp3 first_cluster=327682 (10494048) size=5779456
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Stars-Simple Red.mp3 first_cluster=120175 (3853824) size=3958784
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Sweet Emotion-Aerosmith.mp3 first_cluster=290192 (9294368) size=4940198
+fat_copy dst=/home/rafael/Músicas/Novas musicas/The Hall Of Mirrors-Kraftwerk.mp3 first_cluster=264219 (8463232) size=7542663
+fat_copy dst=/home/rafael/Músicas/Novas musicas/The Other Side-Aerosmith.mp3 first_cluster=263812 (8450208) size=9841048
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Walk This Way-Aerosmith.mp3 first_cluster=262490 (8407904) size=5289984
+fat_copy dst=/home/rafael/Músicas/Novas musicas/Armandinho - Balinha Colorida.mp3 first_cluster=69925 (2245824) size=1665776
+fat_copy dst=/home/rafael/Músicas/Armandinho - Desejos do Mar.mp3 first_cluster=70027 (2249088) size=1807464
+fat_copy dst=/home/rafael/Músicas/Armandinho - Balinha Colorida.mp3 first_cluster=70138 (2252640) size=1665776
+fat_copy dst=/home/rafael/Músicas/Armandinho - Bomba Netuno.mp3 first_cluster=70240 (2255904) size=1748741
+fat_copy dst=/home/rafael/Músicas/Armandinho - Acordar cedo (2013).mp3 first_cluster=75614 (2427872) size=2441717
+fat_copy dst=/home/rafael/Músicas/Armandinho - Semente.mp3 first_cluster=0 (4294975520) size=0
+FAT: cluster=6393(0x18f9), pos=220864
+FAT: cluster=204564(0x31f14), pos=6562336
+fat_copy dst=/home/rafael/Músicas/80S/ALAN PARSONS PROJECT - EYE IN THE SKY.MP3 first_cluster=6394 (212832) size=6905310
+fat_copy dst=/home/rafael/Músicas/80S/AlbumArtSmall.jpg first_cluster=6816 (226336) size=2290
+fat_copy dst=/home/rafael/Músicas/80S/AlbumArt_{2CE0F87E-D4B9-438B-83EF-7234D1AF61FF}_Large.jpg first_cluster=6817 (226368) size=7779
+fat_copy dst=/home/rafael/Músicas/80S/AlbumArt_{2CE0F87E-D4B9-438B-83EF-7234D1AF61FF}_Small.jpg first_cluster=6818 (226400) size=2290
+fat_copy dst=/home/rafael/Músicas/80S/AlbumArt_{39E6B926-DFED-47B8-8AEB-9C63963BA18E}_Large.jpg first_cluster=6819 (226432) size=12208
+fat_copy dst=/home/rafael/Músicas/80S/AlbumArt_{39E6B926-DFED-47B8-8AEB-9C63963BA18E}_Small.jpg first_cluster=6820 (226464) size=2906
+fat_copy dst=/home/rafael/Músicas/80S/AlbumArt_{50A2DE6D-D95A-4C38-B67A-5C292FF67F0A}_Large.jpg first_cluster=6821 (226496) size=9778
+fat_copy dst=/home/rafael/Músicas/80S/AlbumArt_{50A2DE6D-D95A-4C38-B67A-5C292FF67F0A}_Small.jpg first_cluster=6822 (226528) size=2879
+fat_copy dst=/home/rafael/Músicas/80S/AlbumArt_{D78510A2-F4B6-4C5A-9516-D7899273A292}_Large.jpg first_cluster=6823 (226560) size=7864
+fat_copy dst=/home/rafael/Músicas/80S/AlbumArt_{D78510A2-F4B6-4C5A-9516-D7899273A292}_Small.jpg first_cluster=6824 (226592) size=2288
+fat_copy dst=/home/rafael/Músicas/80S/ANIMOTION - OBSESSION.MP3 first_cluster=18175 (589824) size=5389853
+fat_copy dst=/home/rafael/Músicas/80S/ANITA MEYER - WHY TELL ME WHY.mp3 first_cluster=18504 (600352) size=3317825
+fat_copy dst=/home/rafael/Músicas/80S/ART OF NOISE - KISS.MP3 first_cluster=18707 (606848) size=3413099
+fat_copy dst=/home/rafael/Músicas/80S/ART OF NOISE - PARANOIMIA.mp3 first_cluster=18916 (613536) size=3179707
+fat_copy dst=/home/rafael/Músicas/80S/BANANARAMA - CRUEL SUMMER.mp3 first_cluster=19111 (619776) size=5019773
+fat_copy dst=/home/rafael/Músicas/80S/BANANARAMA - NA NA HEY HEY (KISS HIM GOODBYE).MP3 first_cluster=19418 (629600) size=3296091
+fat_copy dst=/home/rafael/Músicas/80S/BANANARAMA - VENUS.mp3 first_cluster=19620 (636064) size=7644485
+fat_copy dst=/home/rafael/Músicas/80S/BANGLES - WALK LIKE AN EGYPTIAN.mp3 first_cluster=20087 (651008) size=6998358
+fat_copy dst=/home/rafael/Músicas/80S/BELINDA CARLISTLE - HEAVEN IS A PLACE ON EARTH.mp3 first_cluster=20515 (664704) size=7945005
+fat_copy dst=/home/rafael/Músicas/80S/BILLY JOEL - UPTOWN GIRL.mp3 first_cluster=21000 (680224) size=4687494
+fat_copy dst=/home/rafael/Músicas/80S/BILLY JOEL - WE DIDN'T START THE FIRE.mp3 first_cluster=21287 (689408) size=6982091
+fat_copy dst=/home/rafael/Músicas/80S/BILLY OCEAN - CARRIBBEAN QUEEN.mp3 first_cluster=21714 (703072) size=5780359
+fat_copy dst=/home/rafael/Músicas/80S/BILLY OCEAN - GET OUTTA MY DREAMS, GET INTO MY CAR.mp3 first_cluster=22067 (714368) size=8789246
+fat_copy dst=/home/rafael/Músicas/80S/BILLY OCEAN - LOVERBOY.mp3 first_cluster=22604 (731552) size=7182820
+fat_copy dst=/home/rafael/Músicas/80S/BLACK BOX - RIDE ON TIME.MP3 first_cluster=23043 (745600) size=4145017
+fat_copy dst=/home/rafael/Músicas/80S/BLONDIE - HEART OF GLASS.mp3 first_cluster=23296 (753696) size=6574581
+fat_copy dst=/home/rafael/Músicas/80S/BOBBY BROWN - MY PEROGATIVE.mp3 first_cluster=24804 (801952) size=5758006
+fat_copy dst=/home/rafael/Músicas/80S/BOYS DON'T CRY - I WANNA BE A COWBOY.mp3 first_cluster=25156 (813216) size=5375874
+fat_copy dst=/home/rafael/Músicas/80S/BOYS TOWN GANG - CAN'T TAKE MY EYES OFF YOU.mp3 first_cluster=25485 (823744) size=5396563
+fat_copy dst=/home/rafael/Músicas/80S/BRONSKI BEAT - SMALL TOWN BOY.mp3 first_cluster=25815 (834304) size=4839423
+fat_copy dst=/home/rafael/Músicas/80S/BRONSKI BEAT - WHY.mp3 first_cluster=26111 (843776) size=3907792
+fat_copy dst=/home/rafael/Músicas/80S/BRUCE HORNSBY - THE WAY IT IS.mp3 first_cluster=26350 (851424) size=4188713
+fat_copy dst=/home/rafael/Músicas/80S/BRYAN FERRY - DON'T STOP THE DANCE.MP3 first_cluster=26606 (859616) size=4195349
+fat_copy dst=/home/rafael/Músicas/80S/BUSTER POINTDEXTER - HIT THE ROAD JACK.mp3 first_cluster=26863 (867840) size=2702418
+fat_copy dst=/home/rafael/Músicas/80S/CHIC - LE FREAK.mp3 first_cluster=27028 (873120) size=4166414
+fat_copy dst=/home/rafael/Músicas/80S/CHRISTOPHER CROSS - ALL RIGHT.mp3 first_cluster=27283 (881280) size=4097395
+fat_copy dst=/home/rafael/Músicas/80S/CHRISTOPHER CROSS - RIDE LIKE THE WIND.mp3 first_cluster=27534 (889312) size=5740753
+fat_copy dst=/home/rafael/Músicas/80S/CLUBHOUSE - DO IT AGAIN MEETS BILLY JEAN.mp3 first_cluster=27885 (900544) size=3914062
+fat_copy dst=/home/rafael/Músicas/80S/COREY HART - SUNGLASSES AT NIGHT.mp3 first_cluster=28124 (908192) size=5682447
+fat_copy dst=/home/rafael/Músicas/80S/DEAD OR ALIVE - YOU SPIN ME ROUND.mp3 first_cluster=28471 (919296) size=3111998
+fat_copy dst=/home/rafael/Músicas/80S/DENNIS EDWARDS - DON'T LOOK ANY FURTHER.mp3 first_cluster=28661 (925376) size=3879199
+fat_copy dst=/home/rafael/Músicas/80S/DESKTOP.INI first_cluster=28898 (932960) size=390
+fat_copy dst=/home/rafael/Músicas/80S/DISIRELESS - VOYAGE VOYAGE.mp3 first_cluster=28899 (932992) size=4219590
+fat_copy dst=/home/rafael/Músicas/80S/DONNA SUMMER - SHE WORKS HARD FOR THE MONEY.mp3 first_cluster=29157 (941248) size=4036523
+fat_copy dst=/home/rafael/Músicas/80S/E.L.O. - ROCK N ROLL IS KING.mp3 first_cluster=29404 (949152) size=3728502
+fat_copy dst=/home/rafael/Músicas/80S/EARTH WIND & FIRE - LET'S GROOVE.mp3 first_cluster=29661 (957376) size=3906369
+fat_copy dst=/home/rafael/Músicas/80S/EDDY GRANT - ELECTRIC AVENUE.mp3 first_cluster=52899 (1700992) size=5900403
+fat_copy dst=/home/rafael/Músicas/80S/EDDY GRANT - I DON'T WANNA DANCE.mp3 first_cluster=53260 (1712544) size=3511985
+fat_copy dst=/home/rafael/Músicas/80S/EDELWEISS - BRING ME EDELWEISS.mp3 first_cluster=53475 (1719424) size=3548765
+fat_copy dst=/home/rafael/Músicas/80S/EURYTHMICS - SWEET DREAMS.mp3 first_cluster=53692 (1726368) size=4706421
+fat_copy dst=/home/rafael/Músicas/80S/FALCO - DER KOMMISSAR.mp3 first_cluster=62419 (2005632) size=5572733
+fat_copy dst=/home/rafael/Músicas/80S/FALCO - ROCK ME AMADEUS.mp3 first_cluster=62760 (2016544) size=4816017
+fat_copy dst=/home/rafael/Músicas/80S/Folder.jpg first_cluster=63054 (2025952) size=7779
+fat_copy dst=/home/rafael/Músicas/80S/FR DAVID - WORDS.mp3 first_cluster=29900 (965024) size=4875577
+fat_copy dst=/home/rafael/Músicas/80S/FRANKIE GOES TO HOLLYWOOD - RELAX.mp3 first_cluster=31261 (1008576) size=3792255
+fat_copy dst=/home/rafael/Músicas/80S/FUN FUN - HAPPY STATION.mp3 first_cluster=50391 (1620736) size=3147942
+fat_copy dst=/home/rafael/Músicas/80S/GARY NUMAN - CARS.mp3 first_cluster=51309 (1650112) size=5458630
+fat_copy dst=/home/rafael/Músicas/80S/GENE LOVES JEZEBEL - TWENTY KILLER HURTS.mp3 first_cluster=30442 (982368) size=5213497
+fat_copy dst=/home/rafael/Músicas/80S/GENERAL PUBLIC - TENDERNESS.mp3 first_cluster=30721 (991296) size=5232305
+fat_copy dst=/home/rafael/Músicas/80S/GEORGE MICHAEL - I WANT YOUR SEX.mp3 first_cluster=52795 (1697664) size=6309386
+fat_copy dst=/home/rafael/Músicas/80S/GLENN FREY - THE HEAT IS ON.mp3 first_cluster=32142 (1036768) size=6453066
+fat_copy dst=/home/rafael/Músicas/80S/HALL & OATES - CAN'T GO FOR THAT.mp3 first_cluster=267698 (8574560) size=3591615
+fat_copy dst=/home/rafael/Músicas/80S/HALL & OATES - MANEATER.mp3 first_cluster=269686 (8638176) size=7783865
+fat_copy dst=/home/rafael/Músicas/80S/HUEY LEWIS & THE NEWS - THE POWER OF LOVE.mp3 first_cluster=270162 (8653408) size=5688090
+fat_copy dst=/home/rafael/Músicas/80S/IMIGINATION - BODY TALK.mp3 first_cluster=270510 (8664544) size=3413859
+fat_copy dst=/home/rafael/Músicas/80S/INDEEP - LAST NIGHT THE DJ SAVED MY LIFE.mp3 first_cluster=270719 (8671232) size=5427534
+fat_copy dst=/home/rafael/Músicas/80S/INFORMATION SOCIETY - WHAT'S ON YOUR MIND.mp3 first_cluster=271051 (8681856) size=6686176
+fat_copy dst=/home/rafael/Músicas/80S/INXS - ORIGINAL SIN.mp3 first_cluster=271827 (8706688) size=5497500
+fat_copy dst=/home/rafael/Músicas/80S/ISLEY BROTHERS - THE HEAT IS ON.mp3 first_cluster=272163 (8717440) size=4505238
+fat_copy dst=/home/rafael/Músicas/80S/JOAN JETT - I LOVE ROCK N ROLL.mp3 first_cluster=272438 (8726240) size=2798495
+fat_copy dst=/home/rafael/Músicas/80S/JOE COCKER - YOU CAN LEAVE YOUR HAT ON.mp3 first_cluster=272609 (8731712) size=6182744
+fat_copy dst=/home/rafael/Músicas/80S/Jon Secada - Just Another Day (Without You).mp3 first_cluster=273316 (8754336) size=5241605
+fat_copy dst=/home/rafael/Músicas/80S/KAJAGOOGOO - TOO SHY.mp3 first_cluster=274064 (8778272) size=5452361
+fat_copy dst=/home/rafael/Músicas/80S/KENNY LOGGINS - DANGER ZONE.mp3 first_cluster=274397 (8788928) size=6449171
+fat_copy dst=/home/rafael/Músicas/80S/KIM CARNES - BETTE DAVIS EYES.mp3 first_cluster=275230 (8815584) size=5484974
+fat_copy dst=/home/rafael/Músicas/80S/KOOL & THE GANG - CELEBRATION.MP3 first_cluster=275565 (8826304) size=4750817
+fat_copy dst=/home/rafael/Músicas/80S/KOOL & THE GANG - LADIES NIGHT.mp3 first_cluster=275855 (8835584) size=3369879
+fat_copy dst=/home/rafael/Músicas/80S/KYLIE MINOGUE - THE LOCOMOTION.mp3 first_cluster=276061 (8842176) size=3111998
+fat_copy dst=/home/rafael/Músicas/80S/LAURA BRANIGAN - GLORIA.mp3 first_cluster=276962 (8871008) size=7121894
+fat_copy dst=/home/rafael/Músicas/80S/LAURA BRANIGAN - SELF CONTROL.mp3 first_cluster=278619 (8924032) size=5841062
+fat_copy dst=/home/rafael/Músicas/80S/LIL LOUIS - FRENCH KISS.mp3 first_cluster=278976 (8935456) size=4718543
+fat_copy dst=/home/rafael/Músicas/80S/LIPPS INC - FUNKYTOWN.mp3 first_cluster=280358 (8979680) size=7379116
+fat_copy dst=/home/rafael/Músicas/80S/LOVE UNLIMITED - I'M SO GLAD THAT I'M A WOMAN.mp3 first_cluster=281721 (9023296) size=3812079
+fat_copy dst=/home/rafael/Músicas/80S/M - POP MUSIK.mp3 first_cluster=281954 (9030752) size=4808495
+fat_copy dst=/home/rafael/Músicas/80S/MADNESS - OUR HOUSE.mp3 first_cluster=282248 (9040160) size=4774013
+fat_copy dst=/home/rafael/Músicas/80S/MARRS - PUMP UP THE VOLUME.mp3 first_cluster=282540 (9049504) size=3953603
+fat_copy dst=/home/rafael/Músicas/80S/MICHAEL SEMBELLO - MANIAC.mp3 first_cluster=282782 (9057248) size=5880830
+fat_copy dst=/home/rafael/Músicas/80S/MODERN TALKING - BROTHER LOUIE.mp3 first_cluster=283592 (9083168) size=3527712
+fat_copy dst=/home/rafael/Músicas/80S/MODERN TALKING - YOU'RE MY HEART, YOU'RE MY SOUL.mp3 first_cluster=283808 (9090080) size=5503142
+fat_copy dst=/home/rafael/Músicas/80S/NENA - 99 LUFTBALLOONS.mp3 first_cluster=285418 (9141600) size=5680534
+fat_copy dst=/home/rafael/Músicas/80S/PEPSI & SHIRLIE - HEARTACHE.mp3 first_cluster=285765 (9152704) size=3475204
+fat_copy dst=/home/rafael/Músicas/80S/PET SHOP BOYS - WHAT HAVE I DONE TO DESERVE THIS.mp3 first_cluster=285978 (9159520) size=4161493
+fat_copy dst=/home/rafael/Músicas/80S/PETER GABRIEL - SLEDGEHAMMER.mp3 first_cluster=286232 (9167648) size=7001494
+fat_copy dst=/home/rafael/Músicas/80S/PHIL COLLINS - TWO HEARTS.mp3 first_cluster=286660 (9181344) size=3269506
+fat_copy dst=/home/rafael/Músicas/80S/PROPAGANDA - DUEL EYE TO EYE.mp3 first_cluster=286860 (9187744) size=4530110
+fat_copy dst=/home/rafael/Músicas/80S/QUARTERFLASH - HARDEN MY HEART.mp3 first_cluster=287340 (9203104) size=6643993
+fat_copy dst=/home/rafael/Músicas/80S/RAY PARKER JR. - GHOSTBUSTERS.mp3 first_cluster=268796 (8609696) size=6847517
+fat_copy dst=/home/rafael/Músicas/80S/REAL LIFE - SEND ME AN ANGEL.mp3 first_cluster=276251 (8848256) size=5687463
+fat_copy dst=/home/rafael/Músicas/80S/RED RIDER - LUNATIC FRINGE.mp3 first_cluster=287896 (9220896) size=6355153
+fat_copy dst=/home/rafael/Músicas/80S/RICK JAMES - SUPER FREAK.mp3 first_cluster=279264 (8944672) size=3221085
+fat_copy dst=/home/rafael/Músicas/80S/RICK SPRINGFIELD - JESSIE'S GIRL.mp3 first_cluster=279867 (8963968) size=5445212
+fat_copy dst=/home/rafael/Músicas/80S/RIGHEIRA - VAMOS A LA PLAYA.MP3 first_cluster=281187 (9006208) size=3492760
+fat_copy dst=/home/rafael/Músicas/80S/ROBERT PALMER - ADDICTED TO LOVE.mp3 first_cluster=277397 (8884928) size=7381608
+fat_copy dst=/home/rafael/Músicas/80S/ROBERT PALMER - SIMPLY IRRESISTABLE.mp3 first_cluster=279461 (8950976) size=6143247
+fat_copy dst=/home/rafael/Músicas/80S/ROBIN S - SHOW ME LOVE.mp3 first_cluster=287137 (9196608) size=4911531
+fat_copy dst=/home/rafael/Músicas/80S/ROCKWELL - SOMEBODY'S WATCHING ME.mp3 first_cluster=283141 (9068736) size=7101210
+fat_copy dst=/home/rafael/Músicas/80S/ROMANTICS - TALKING IN YOUR SLEEP.mp3 first_cluster=300350 (9619424) size=6319599
+fat_copy dst=/home/rafael/Músicas/80S/SABRINA - BOYS.mp3 first_cluster=287746 (9216096) size=3791182
+fat_copy dst=/home/rafael/Músicas/80S/SANDRA - IN THE HEAT OF THE NIGHT.MP3 first_cluster=208924 (6693792) size=5102738
+fat_copy dst=/home/rafael/Músicas/80S/SANDRA - MARIA MAGDALENA.mp3 first_cluster=209236 (6703776) size=5617245
+fat_copy dst=/home/rafael/Músicas/80S/SHEILA E - A LOVE BIZARRE.mp3 first_cluster=209579 (6714752) size=3626506
+fat_copy dst=/home/rafael/Músicas/80S/SNIFF & THE TEARS - DRIVER'S SEAT.mp3 first_cluster=227113 (7275840) size=5594257
+fat_copy dst=/home/rafael/Músicas/80S/SOFT CELL - TAINTED LOVE.mp3 first_cluster=227455 (7286784) size=3697559
+fat_copy dst=/home/rafael/Músicas/80S/SPANDAU BALLET - ONLY WHEN YOU LEAVE.mp3 first_cluster=227681 (7294016) size=6125484
+fat_copy dst=/home/rafael/Músicas/80S/STARS ON 45 - MORE STARS.mp3 first_cluster=228055 (7305984) size=4579035
+fat_copy dst=/home/rafael/Músicas/80S/STARSHIP - WE BUILT THIS CITY.mp3 first_cluster=228335 (7314944) size=8058335
+fat_copy dst=/home/rafael/Músicas/80S/SWING OUT SISTER - BREAKOUT.mp3 first_cluster=228954 (7334752) size=5493739
+fat_copy dst=/home/rafael/Músicas/80S/TANITA TIKARAM - TWIST IN MY SOBRIETY.MP3 first_cluster=229290 (7345504) size=4676420
+fat_copy dst=/home/rafael/Músicas/80S/TAYLOR DAYNE - TELL IT TO MY HEART.mp3 first_cluster=229576 (7354656) size=3490459
+fat_copy dst=/home/rafael/Músicas/80S/TERENCE TRENT D'ARBY - WISHING WELL.mp3 first_cluster=229790 (7361504) size=6264156
+fat_copy dst=/home/rafael/Músicas/80S/THE CHURCH - UNDER THE MILKY WAY.mp3 first_cluster=244371 (7828096) size=7170768
+fat_copy dst=/home/rafael/Músicas/80S/THE COMMUNARDS - NEVER CAN SAY GOODBYE.mp3 first_cluster=245581 (7866816) size=4283698
+fat_copy dst=/home/rafael/Músicas/80S/THE FIXX - ONE THING LEADS TO ANOTHER.mp3 first_cluster=245843 (7875200) size=4782131
+fat_copy dst=/home/rafael/Músicas/80S/THE PRETENDERS - DON'T GET ME WRONG.MP3 first_cluster=246135 (7884544) size=3662869
+fat_copy dst=/home/rafael/Músicas/80S/THE S.O.S. BAND - TAKE YOUR TIME (DO IT RIGHT).mp3 first_cluster=247203 (7918720) size=6916693
+fat_copy dst=/home/rafael/Músicas/80S/TIFFANY - THINK WE'RE ALONE NOW.mp3 first_cluster=247626 (7932256) size=3663704
+fat_copy dst=/home/rafael/Músicas/80S/TINA CHARLES - I LOVE TO LOVE.mp3 first_cluster=247850 (7939424) size=2993715
+fat_copy dst=/home/rafael/Músicas/80S/TOM JONES & ART OF NOISE - KISS.MP3 first_cluster=248033 (7945280) size=3378239
+fat_copy dst=/home/rafael/Músicas/80S/TOMMY TUTONE - JENNY.mp3 first_cluster=204565 (6554304) size=4420420
+fat_copy dst=/home/rafael/Músicas/80S/TONE LOC - WILD THING.mp3 first_cluster=246359 (7891712) size=6374588
+fat_copy dst=/home/rafael/Músicas/80S/TONI BASIL - HEY MICKEY.MP3 first_cluster=230173 (7373760) size=4042221
+fat_copy dst=/home/rafael/Músicas/80S/TWEE BELGEN - LENA.mp3 first_cluster=244809 (7842112) size=3803959
+fat_copy dst=/home/rafael/Músicas/80S/US3 - CANTALOOP.mp3 first_cluster=211609 (6779712) size=5813409
+fat_copy dst=/home/rafael/Músicas/80S/VOGGUE - DANCIN' THE NIGHT AWAY.MP3 first_cluster=211472 (6775328) size=3055156
+fat_copy dst=/home/rafael/Músicas/80S/WANG CHUNG - DANCE HALL DAYS.mp3 first_cluster=262130 (8396384) size=5775861
+fat_copy dst=/home/rafael/Músicas/80S/WARREN G. AND NATE DOGG - REGULATE.mp3 first_cluster=66091 (2123136) size=5622961
+fat_copy dst=/home/rafael/Músicas/80S/WEATHER GIRLS - IT'S RAINING MEN.mp3 first_cluster=70455 (2262784) size=5027923
+fat_copy dst=/home/rafael/Músicas/80S/WHAM! - WAKE ME UP BEFORE YOU GO GO.mp3 first_cluster=70762 (2272608) size=5486842
+fat_copy dst=/home/rafael/Músicas/80S/WHEN IN ROME - THE PROMISE.mp3 first_cluster=71097 (2283328) size=5341361
+fat_copy dst=/home/rafael/Músicas/80S/YARBOROUGH & PEOPLES - DON'T STOP THE MUSIC.mp3 first_cluster=71424 (2293792) size=3991647
+fat_copy dst=/home/rafael/Músicas/80S/YAZZ - DON'T GO.mp3 first_cluster=120417 (3861568) size=4643610
+fat_copy dst=/home/rafael/Músicas/80S/YAZZ - THE ONLY WAY IS UP.mp3 first_cluster=120701 (3870656) size=3794163
+fat_copy dst=/home/rafael/Músicas/Jethro Tull - Locomotive Breath.mp3 first_cluster=75419 (2421632) size=4406366
+fat_copy dst=/home/rafael/Músicas/Jethro Tull - Pied Piper.mp3 first_cluster=71668 (2301600) size=4395008
+fat_copy dst=/home/rafael/Músicas/Jethro Tull - Skating Away On the Thin Ice of a New Day.mp3 first_cluster=70347 (2259328) size=3846862
+fat_copy dst=/home/rafael/Músicas/Jethro Tull - Fat Man.mp3 first_cluster=151974 (4871392) size=2769118
+
+TestDisk exited normally.

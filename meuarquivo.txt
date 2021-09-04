@@ -1,0 +1,3 @@
+Cafeína Codificada é muito legal!
+ Agora aprendeu a criar arquivos de texto no Python
+através do script Escrevendo (criando )arquivo.py

@@ -1,0 +1,361 @@
+Checking session consistency (brasero_burn_check_session_consistency brasero-burn.c:1739)
+BraseroBurnURI called brasero_job_get_action
+BraseroBurnURI called brasero_job_get_action
+BraseroBurnURI called brasero_job_set_output_size_for_current_track
+BraseroBurnURI stopping
+BraseroBurnURI called brasero_job_get_action
+BraseroBurnURI called brasero_job_get_session_output_size
+BraseroBurnURI called brasero_job_get_action
+BraseroBurnURI called brasero_job_get_current_track
+BraseroBurnURI no burn:// URI found
+BraseroBurnURI stopping
+BraseroLocalTrack called brasero_job_get_action
+BraseroLocalTrack called brasero_job_get_action
+BraseroLocalTrack called brasero_job_set_output_size_for_current_track
+BraseroLocalTrack stopping
+BraseroLocalTrack called brasero_job_get_action
+BraseroLocalTrack called brasero_job_get_session_output_size
+BraseroLocalTrack called brasero_job_get_action
+BraseroLocalTrack called brasero_job_get_current_track
+BraseroLocalTrack no remote URIs
+BraseroLocalTrack stopping
+BraseroChecksumFiles called brasero_job_get_output_type
+BraseroChecksumFiles called brasero_job_get_current_track
+BraseroChecksumFiles called brasero_job_get_action
+BraseroChecksumFiles called brasero_job_get_action
+BraseroChecksumFiles called brasero_job_set_output_size_for_current_track
+BraseroChecksumFiles stopping
+BraseroChecksumFiles called brasero_job_get_output_type
+BraseroChecksumFiles called brasero_job_get_current_track
+BraseroChecksumFiles called brasero_job_get_action
+BraseroChecksumFiles called brasero_job_get_session_output_size
+BraseroChecksumFiles called brasero_job_get_action
+BraseroChecksumFiles called brasero_job_get_action
+BraseroChecksumFiles called brasero_job_get_current_track
+BraseroChecksumFiles called brasero_job_get_current_track
+BraseroChecksumFiles called brasero_job_set_current_action
+BraseroChecksumFiles called brasero_job_get_flags
+BraseroChecksumFiles called brasero_job_get_action
+BraseroChecksumFiles called brasero_job_get_current_track
+BraseroChecksumFiles Adding graft for checksum file /.checksum.md5 file:///tmp/brasero_tmp_E45FRZ.md5
+BraseroChecksumFiles called brasero_job_add_track
+BraseroChecksumFiles called brasero_job_get_action
+BraseroChecksumFiles Finished track successfully
+BraseroChecksumFiles stopping
+BraseroGenisoimage called brasero_job_get_action
+BraseroGenisoimage getting varg
+BraseroGenisoimage called brasero_job_get_action
+BraseroGenisoimage called brasero_job_get_current_track
+BraseroGenisoimage called brasero_job_get_tmp_dir
+BraseroGenisoimage called brasero_job_get_data_label
+BraseroGenisoimage called brasero_job_get_flags
+BraseroGenisoimage called brasero_job_get_action
+BraseroGenisoimage called brasero_job_set_current_action
+BraseroGenisoimage got varg:
+	/usr/bin/genisoimage
+	-input-charset
+	utf8
+	-r
+	-J
+	-iso-level
+	3
+	-allow-limited-size
+	-udf
+	-graft-points
+	-D
+	-path-list
+	/tmp/brasero_tmp_LHWKRZ
+	-exclude-list
+	/tmp/brasero_tmp_K4TKRZ
+	-V
+	Disco de dados (04 nov 18)
+	-A
+	Brasero-3.12.1
+	-sysid
+	LINUX
+	-quiet
+	-print-size
+BraseroGenisoimage Launching command
+BraseroGenisoimage called brasero_job_get_fd_out
+BraseroGenisoimage called brasero_job_get_fd_in
+BraseroGenisoimage called brasero_job_get_fd_out
+BraseroGenisoimage stderr: HUP
+BraseroGenisoimage stdout: 2151061
+BraseroGenisoimage called brasero_job_get_action
+BraseroGenisoimage called brasero_job_set_output_size_for_current_track
+BraseroGenisoimage stdout: HUP
+BraseroGenisoimage process finished with status 0
+BraseroGenisoimage Finished track successfully
+BraseroGenisoimage called brasero_job_get_done_tracks
+BraseroGenisoimage called brasero_job_get_fd_out
+BraseroGenisoimage called brasero_job_get_action
+BraseroGenisoimage stopping
+BraseroGenisoimage called brasero_job_get_done_tracks
+BraseroGenisoimage called brasero_job_get_fd_out
+BraseroGenisoimage called brasero_job_get_action
+BraseroGenisoimage called brasero_job_get_action
+BraseroGenisoimage called brasero_job_get_session_output_size
+BraseroGenisoimage output set (IMAGE) image = /media/rafael/Disco/Computador/Linux/windows7.iso toc = none
+BraseroGenisoimage called brasero_job_get_session_output_size
+BraseroGenisoimage getting varg
+BraseroGenisoimage called brasero_job_get_action
+BraseroGenisoimage called brasero_job_get_current_track
+BraseroGenisoimage called brasero_job_get_tmp_dir
+BraseroGenisoimage called brasero_job_get_data_label
+BraseroGenisoimage called brasero_job_get_flags
+BraseroGenisoimage called brasero_job_get_action
+BraseroGenisoimage called brasero_job_get_fd_out
+BraseroGenisoimage called brasero_job_get_image_output
+BraseroGenisoimage called brasero_job_set_current_action
+BraseroGenisoimage got varg:
+	/usr/bin/genisoimage
+	-input-charset
+	utf8
+	-r
+	-J
+	-iso-level
+	3
+	-allow-limited-size
+	-udf
+	-graft-points
+	-D
+	-path-list
+	/tmp/brasero_tmp_ZTPORZ
+	-exclude-list
+	/tmp/brasero_tmp_YUBNRZ
+	-V
+	Disco de dados (04 nov 18)
+	-A
+	Brasero-3.12.1
+	-sysid
+	LINUX
+	-o
+	/media/rafael/Disco/Computador/Linux/windows7.iso
+BraseroGenisoimage Launching command
+BraseroGenisoimage called brasero_job_get_fd_out
+BraseroGenisoimage called brasero_job_get_fd_in
+BraseroGenisoimage called brasero_job_get_fd_out
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_PERFORMANC000 for  sources/dlmanifests/microsoft-windows-performancecounterinfrastructureconsumer-dl (microsoft-windows-performancecounterinfrastructure-dl)
+BraseroGenisoimage stderr: Using TERMINALSERVICES_SESSION000.MAN;1 for  sources/dlmanifests/terminalservices-sessiondirectory-server-dl.man (terminalservices-sessiondirectory-client-dl.man)
+BraseroGenisoimage stderr: Using TERMINALSERVICES_APPSERV000.MAN;1 for  sources/dlmanifests/terminalservices-appserver-licensing-dl.man (terminalservices-appserver-dl.man)
+BraseroGenisoimage stderr: Using PERFORMANCECOUNTERINFRAS000.MAN;1 for  sources/dlmanifests/performancecounterinfrastructureconsumer-dl.man (performancecounterinfrastructure-dl.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_FAX_CL000.MAN;1 for  sources/dlmanifests/microsoft-windows-fax-client-proenterprise-dl.man (microsoft-windows-fax-client-applications-dl.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_CERTIF000.MAN;1 for  sources/dlmanifests/microsoft-windows-certificateservices-mscep-dl.man (microsoft-windows-certificateservices-camanagement-dl.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_CERTIF001.MAN;1 for  sources/dlmanifests/microsoft-windows-certificateservices-camanagement-dl.man (microsoft-windows-certificateservices-ca-dl.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_IIS_RE000.MAN;1 for  sources/dlmanifests/microsoft-windows-iis-requestmonitor-deployment-dl.man (microsoft-windows-iis-requestfiltering-deployment-dl.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_IIS_MA000.MAN;1 for  sources/dlmanifests/microsoft-windows-iis-managementscriptingtools-deployment-dl.man (microsoft-windows-iis-managementconsole-deployment-dl.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_IIS_LE000.MAN;1 for  sources/dlmanifests/microsoft-windows-iis-legacysnapin-deployment-dl.man (microsoft-windows-iis-legacyscripts-deployment-dl.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_IIS_IS000.MAN;1 for  sources/dlmanifests/microsoft-windows-iis-isapifilter-deployment-dl.man (microsoft-windows-iis-isapiextensions-deployment-dl.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_IIS_HT000.MAN;1 for  sources/dlmanifests/microsoft-windows-iis-httpcompressionstatic-deployment-dl.man (microsoft-windows-iis-httpcompressiondynamic-deployment-dl.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_IIS_MA001.MAN;1 for  sources/dlmanifests/microsoft-windows-iis-managementconsole-deployment-dl.man (microsoft-windows-iis-managementservice-deployment-dl.man)
+BraseroGenisoimage stderr: Using POWERMANAGEMENT_POWERPOL000.MAN;1 for  sources/replacementmanifests/powermanagement-powerpolicy-definitions-replacement.man (powermanagement-powerpolicy-migration-replacement.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_TERMINALSE000 for  sources/replacementmanifests/microsoft-windows-terminalservices-licenseserver (microsoft-windows-terminalservices-appserver-licensing)
+BraseroGenisoimage stderr: Using POWERMANAGEMENT_POWERPOL000.MAN;1 for  sourc64/replacementmanifests/powermanagement-powerpolicy-migration-replacement.man (powermanagement-powerpolicy-definitions-replacement.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_TERMINALSE000 for  sourc64/replacementmanifests/microsoft-windows-terminalservices-licenseserver (microsoft-windows-terminalservices-appserver-licensing)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_CERTIF000.MAN;1 for  /media/rafael/Disco/Computador/d/Downloads/Windows 7/sourc64/dlmanifests/microsoft-windows-certificateservices-camanagement-dl.man (microsoft-windows-certificateservices-ca-dl.man)
+BraseroGenisoimage stderr: Using TERMINALSERVICES_SESSION000.MAN;1 for  /media/rafael/Disco/Computador/d/Downloads/Windows 7/sourc64/dlmanifests/terminalservices-sessiondirectory-server-dl.man (terminalservices-sessiondirectory-client-dl.man)
+BraseroGenisoimage stderr: Using TERMINALSERVICES_APPSERV000.MAN;1 for  /media/rafael/Disco/Computador/d/Downloads/Windows 7/sourc64/dlmanifests/terminalservices-appserver-licensing-dl.man (terminalservices-appserver-dl.man)
+BraseroGenisoimage stderr: Using PERFORMANCECOUNTERINFRAS000.MAN;1 for  /media/rafael/Disco/Computador/d/Downloads/Windows 7/sourc64/dlmanifests/performancecounterinfrastructureconsumer-dl.man (performancecounterinfrastructure-dl.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_PERFORMANC000 for  /media/rafael/Disco/Computador/d/Downloads/Windows 7/sourc64/dlmanifests/microsoft-windows-performancecounterinfrastructureconsumer-dl (microsoft-windows-performancecounterinfrastructure-dl)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_IIS_RE000.MAN;1 for  /media/rafael/Disco/Computador/d/Downloads/Windows 7/sourc64/dlmanifests/microsoft-windows-iis-requestmonitor-deployment-dl.man (microsoft-windows-iis-requestfiltering-deployment-dl.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_IIS_MA000.MAN;1 for  /media/rafael/Disco/Computador/d/Downloads/Windows 7/sourc64/dlmanifests/microsoft-windows-iis-managementservice-deployment-dl.man (microsoft-windows-iis-managementscriptingtools-deployment-dl.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_IIS_MA001.MAN;1 for  /media/rafael/Disco/Computador/d/Downloads/Windows 7/sourc64/dlmanifests/microsoft-windows-iis-managementscriptingtools-deployment-dl.man (microsoft-windows-iis-managementconsole-deployment-dl.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_IIS_IS000.MAN;1 for  /media/rafael/Disco/Computador/d/Downloads/Windows 7/sourc64/dlmanifests/microsoft-windows-iis-isapifilter-deployment-dl.man (microsoft-windows-iis-isapiextensions-deployment-dl.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_IIS_HT000.MAN;1 for  /media/rafael/Disco/Computador/d/Downloads/Windows 7/sourc64/dlmanifests/microsoft-windows-iis-httpcompressionstatic-deployment-dl.man (microsoft-windows-iis-httpcompressiondynamic-deployment-dl.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_FAX_CL000.MAN;1 for  /media/rafael/Disco/Computador/d/Downloads/Windows 7/sourc64/dlmanifests/microsoft-windows-fax-client-proenterprise-dl.man (microsoft-windows-fax-client-applications-dl.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_CERTIF001.MAN;1 for  /media/rafael/Disco/Computador/d/Downloads/Windows 7/sourc64/dlmanifests/microsoft-windows-certificateservices-ca-dl.man (microsoft-windows-certificateservices-mscep-dl.man)
+BraseroGenisoimage stderr: Using MICROSOFT_WINDOWS_IIS_LE000.MAN;1 for  /media/rafael/Disco/Computador/d/Downloads/Windows 7/sourc64/dlmanifests/microsoft-windows-iis-legacysnapin-deployment-dl.man (microsoft-windows-iis-legacyscripts-deployment-dl.man)
+BraseroGenisoimage stderr:   0.47% done, estimate finish Sun Nov  4 21:02:01 2018
+BraseroGenisoimage stderr:   0.70% done, estimate finish Sun Nov  4 20:59:38 2018
+BraseroGenisoimage stderr:   0.93% done, estimate finish Sun Nov  4 20:58:27 2018
+BraseroGenisoimage stderr:   1.16% done, estimate finish Sun Nov  4 20:59:10 2018
+BraseroGenisoimage stderr:   1.40% done, estimate finish Sun Nov  4 20:58:27 2018
+BraseroGenisoimage stderr:   1.63% done, estimate finish Sun Nov  4 20:58:57 2018
+BraseroGenisoimage stderr:   1.86% done, estimate finish Sun Nov  4 20:58:27 2018
+BraseroGenisoimage stderr:   2.09% done, estimate finish Sun Nov  4 20:58:03 2018
+BraseroGenisoimage stderr:   2.32% done, estimate finish Sun Nov  4 20:58:27 2018
+BraseroGenisoimage stderr:   2.56% done, estimate finish Sun Nov  4 20:58:07 2018
+BraseroGenisoimage stderr:   2.79% done, estimate finish Sun Nov  4 20:57:51 2018
+BraseroGenisoimage stderr:   3.02% done, estimate finish Sun Nov  4 20:58:10 2018
+BraseroGenisoimage stderr:   3.25% done, estimate finish Sun Nov  4 20:57:56 2018
+BraseroGenisoimage stderr:   3.49% done, estimate finish Sun Nov  4 20:58:12 2018
+BraseroGenisoimage stderr:   3.72% done, estimate finish Sun Nov  4 20:58:00 2018
+BraseroGenisoimage stderr:   3.95% done, estimate finish Sun Nov  4 20:57:49 2018
+BraseroGenisoimage stderr:   4.18% done, estimate finish Sun Nov  4 20:58:03 2018
+BraseroGenisoimage stderr:   4.42% done, estimate finish Sun Nov  4 20:57:53 2018
+BraseroGenisoimage stderr:   4.65% done, estimate finish Sun Nov  4 20:58:05 2018
+BraseroGenisoimage stderr:   4.88% done, estimate finish Sun Nov  4 20:57:56 2018
+BraseroGenisoimage stderr:   5.11% done, estimate finish Sun Nov  4 20:58:07 2018
+BraseroGenisoimage stderr:   5.35% done, estimate finish Sun Nov  4 20:57:59 2018
+BraseroGenisoimage stderr:   5.58% done, estimate finish Sun Nov  4 20:57:51 2018
+BraseroGenisoimage stderr:   5.81% done, estimate finish Sun Nov  4 20:58:01 2018
+BraseroGenisoimage stderr:   6.04% done, estimate finish Sun Nov  4 20:57:53 2018
+BraseroGenisoimage stderr:   6.28% done, estimate finish Sun Nov  4 20:57:47 2018
+BraseroGenisoimage stderr:   6.51% done, estimate finish Sun Nov  4 20:57:56 2018
+BraseroGenisoimage stderr:   6.74% done, estimate finish Sun Nov  4 20:57:50 2018
+BraseroGenisoimage stderr:   6.97% done, estimate finish Sun Nov  4 20:57:58 2018
+BraseroGenisoimage stderr:   7.21% done, estimate finish Sun Nov  4 20:57:52 2018
+BraseroGenisoimage stderr:   7.44% done, estimate finish Sun Nov  4 20:57:46 2018
+BraseroGenisoimage stderr:   7.67% done, estimate finish Sun Nov  4 20:57:54 2018
+BraseroGenisoimage stderr:   7.90% done, estimate finish Sun Nov  4 20:57:49 2018
+BraseroGenisoimage stderr:   8.14% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:   8.37% done, estimate finish Sun Nov  4 20:57:51 2018
+BraseroGenisoimage stderr:   8.60% done, estimate finish Sun Nov  4 20:57:46 2018
+BraseroGenisoimage stderr:   8.83% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:   9.07% done, estimate finish Sun Nov  4 20:57:48 2018
+BraseroGenisoimage stderr:   9.30% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:   9.53% done, estimate finish Sun Nov  4 20:57:50 2018
+BraseroGenisoimage stderr:   9.76% done, estimate finish Sun Nov  4 20:57:46 2018
+BraseroGenisoimage stderr:  10.00% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  10.23% done, estimate finish Sun Nov  4 20:57:47 2018
+BraseroGenisoimage stderr:  10.46% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  10.69% done, estimate finish Sun Nov  4 20:57:49 2018
+BraseroGenisoimage stderr:  10.93% done, estimate finish Sun Nov  4 20:57:45 2018
+BraseroGenisoimage stderr:  11.16% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  11.39% done, estimate finish Sun Nov  4 20:57:47 2018
+BraseroGenisoimage stderr:  11.62% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  11.85% done, estimate finish Sun Nov  4 20:57:49 2018
+BraseroGenisoimage stderr:  12.09% done, estimate finish Sun Nov  4 20:57:45 2018
+BraseroGenisoimage stderr:  12.32% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  12.55% done, estimate finish Sun Nov  4 20:57:47 2018
+BraseroGenisoimage stderr:  12.78% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  13.02% done, estimate finish Sun Nov  4 20:57:48 2018
+BraseroGenisoimage stderr:  13.25% done, estimate finish Sun Nov  4 20:57:45 2018
+BraseroGenisoimage stderr:  13.48% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  13.71% done, estimate finish Sun Nov  4 20:57:46 2018
+BraseroGenisoimage stderr:  13.95% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  14.18% done, estimate finish Sun Nov  4 20:57:48 2018
+BraseroGenisoimage stderr:  14.41% done, estimate finish Sun Nov  4 20:57:45 2018
+BraseroGenisoimage stderr:  14.64% done, estimate finish Sun Nov  4 20:57:49 2018
+BraseroGenisoimage stderr:  14.88% done, estimate finish Sun Nov  4 20:57:46 2018
+BraseroGenisoimage stderr:  15.11% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  15.34% done, estimate finish Sun Nov  4 20:57:47 2018
+BraseroGenisoimage stderr:  15.57% done, estimate finish Sun Nov  4 20:57:45 2018
+BraseroGenisoimage stderr:  15.81% done, estimate finish Sun Nov  4 20:57:49 2018
+BraseroGenisoimage stderr:  16.04% done, estimate finish Sun Nov  4 20:57:46 2018
+BraseroGenisoimage stderr:  16.27% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  16.50% done, estimate finish Sun Nov  4 20:57:47 2018
+BraseroGenisoimage stderr:  16.74% done, estimate finish Sun Nov  4 20:57:45 2018
+BraseroGenisoimage stderr:  16.97% done, estimate finish Sun Nov  4 20:57:48 2018
+BraseroGenisoimage stderr:  17.20% done, estimate finish Sun Nov  4 20:57:46 2018
+BraseroGenisoimage stderr:  17.43% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  17.67% done, estimate finish Sun Nov  4 20:57:47 2018
+BraseroGenisoimage stderr:  17.90% done, estimate finish Sun Nov  4 20:57:45 2018
+BraseroGenisoimage stderr:  18.13% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  18.36% done, estimate finish Sun Nov  4 20:57:46 2018
+BraseroGenisoimage stderr:  18.60% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  18.83% done, estimate finish Sun Nov  4 20:57:47 2018
+BraseroGenisoimage stderr:  19.06% done, estimate finish Sun Nov  4 20:57:45 2018
+BraseroGenisoimage stderr:  19.29% done, estimate finish Sun Nov  4 20:57:48 2018
+BraseroGenisoimage stderr:  19.53% done, estimate finish Sun Nov  4 20:57:46 2018
+BraseroGenisoimage stderr:  19.76% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  19.99% done, estimate finish Sun Nov  4 20:57:47 2018
+BraseroGenisoimage stderr:  20.22% done, estimate finish Sun Nov  4 20:57:45 2018
+BraseroGenisoimage stderr:  20.46% done, estimate finish Sun Nov  4 20:57:47 2018
+BraseroGenisoimage stderr:  20.69% done, estimate finish Sun Nov  4 20:57:46 2018
+BraseroGenisoimage stderr:  20.92% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  21.15% done, estimate finish Sun Nov  4 20:57:46 2018
+BraseroGenisoimage stderr:  21.39% done, estimate finish Sun Nov  4 20:57:45 2018
+BraseroGenisoimage stderr:  21.62% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  21.85% done, estimate finish Sun Nov  4 20:57:45 2018
+BraseroGenisoimage stderr:  22.08% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  22.32% done, estimate finish Sun Nov  4 20:57:46 2018
+BraseroGenisoimage stderr:  22.55% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  22.78% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  23.01% done, estimate finish Sun Nov  4 20:57:45 2018
+BraseroGenisoimage stderr:  23.24% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  23.48% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  23.71% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  23.94% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  24.17% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:  24.41% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  24.64% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  24.87% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  25.10% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  25.34% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:  25.57% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  25.80% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  26.03% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  26.27% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  26.50% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:  26.73% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  26.96% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  27.20% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:  27.43% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  27.66% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:  27.89% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  28.13% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  28.36% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:  28.59% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  28.82% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:  29.06% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  29.29% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  29.52% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  29.75% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  29.99% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  30.22% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  30.45% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  30.68% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:  30.92% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  31.15% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  31.38% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  31.61% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  31.85% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:  32.08% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  32.31% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  32.54% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:  32.77% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  33.01% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:  33.24% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  33.47% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  33.70% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:  33.94% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  34.17% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:  34.40% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  34.63% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  34.87% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  35.10% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  35.33% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:  35.56% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  35.80% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  36.03% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:  36.26% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  36.49% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:  36.73% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  36.96% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  37.19% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  37.42% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  37.66% done, estimate finish Sun Nov  4 20:57:41 2018
+BraseroGenisoimage stderr:  37.89% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  38.12% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  38.35% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  38.59% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  38.82% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  39.05% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  39.28% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  39.52% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  39.75% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  39.98% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  40.21% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  40.45% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  40.68% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  40.91% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  41.14% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  41.38% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  41.61% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  41.84% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  42.07% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  42.31% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  42.54% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr:  42.77% done, estimate finish Sun Nov  4 20:57:42 2018
+BraseroGenisoimage stderr:  43.00% done, estimate finish Sun Nov  4 20:57:44 2018
+BraseroGenisoimage stderr:  43.24% done, estimate finish Sun Nov  4 20:57:43 2018
+BraseroGenisoimage stderr: /usr/bin/genisoimage: Value too large for defined data type. Cannot read from '/media/rafael/Disco/Computador/d/Downloads/Windows 7/sources/install.wim'
+BraseroGenisoimage called brasero_job_error
+BraseroGenisoimage finished with an error
+BraseroGenisoimage asked to stop because of an error
+	error		= 22
+	message	= "Não há espaço disponível no disco"
+BraseroGenisoimage stopping
+BraseroGenisoimage got killed
+Session error : Não há espaço disponível no disco (brasero_burn_record brasero-burn.c:2856)

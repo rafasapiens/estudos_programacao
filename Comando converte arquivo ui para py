@@ -1,0 +1,6 @@
+
+#Comando para converter arquivo *.ui gerado no Qt creator para *.py Python
+#Entrar no terminal na pasta onde está o arquivo.ui e digitar o comando:
+
+
+pyuic5 -x mainwindow.ui -o mainwindow.py
